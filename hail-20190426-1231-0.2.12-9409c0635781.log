@@ -1,0 +1,3842 @@
+2019-04-26 12:31:22 Hail: WARN: This Hail JAR was compiled for Spark 2.2.0, running with Spark 2.2.3.
+  Compatibility is not guaranteed.
+2019-04-26 12:31:22 SparkContext: INFO: Running Spark version 2.2.3
+2019-04-26 12:31:23 NativeCodeLoader: WARN: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2019-04-26 12:31:23 SparkContext: INFO: Submitted application: Hail
+2019-04-26 12:31:24 SparkContext: INFO: Spark configuration:
+spark.app.name=Hail
+spark.driver.extraClassPath=/home/samuel/.local/lib/python3.6/site-packages/hail/hail-all-spark.jar
+spark.executor.extraClassPath=/home/samuel/.local/lib/python3.6/site-packages/hail/hail-all-spark.jar
+spark.hadoop.io.compression.codecs=org.apache.hadoop.io.compress.DefaultCodec,is.hail.io.compress.BGzipCodec,is.hail.io.compress.BGzipCodecTbi,org.apache.hadoop.io.compress.GzipCodec
+spark.hadoop.mapreduce.input.fileinputformat.split.minsize=0
+spark.kryo.registrator=is.hail.kryo.HailKryoRegistrator
+spark.logConf=true
+spark.master=local[*]
+spark.serializer=org.apache.spark.serializer.KryoSerializer
+spark.submit.deployMode=client
+spark.ui.showConsoleProgress=false
+2019-04-26 12:31:24 SecurityManager: INFO: Changing view acls to: samuel
+2019-04-26 12:31:24 SecurityManager: INFO: Changing modify acls to: samuel
+2019-04-26 12:31:24 SecurityManager: INFO: Changing view acls groups to: 
+2019-04-26 12:31:24 SecurityManager: INFO: Changing modify acls groups to: 
+2019-04-26 12:31:24 SecurityManager: INFO: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(samuel); groups with view permissions: Set(); users  with modify permissions: Set(samuel); groups with modify permissions: Set()
+2019-04-26 12:31:25 Utils: INFO: Successfully started service 'sparkDriver' on port 38439.
+2019-04-26 12:31:25 SparkEnv: INFO: Registering MapOutputTracker
+2019-04-26 12:31:25 SparkEnv: INFO: Registering BlockManagerMaster
+2019-04-26 12:31:25 BlockManagerMasterEndpoint: INFO: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+2019-04-26 12:31:25 BlockManagerMasterEndpoint: INFO: BlockManagerMasterEndpoint up
+2019-04-26 12:31:25 DiskBlockManager: INFO: Created local directory at /tmp/blockmgr-7e063f9e-e806-46a4-9f94-506c048918e5
+2019-04-26 12:31:25 MemoryStore: INFO: MemoryStore started with capacity 366.3 MB
+2019-04-26 12:31:26 SparkEnv: INFO: Registering OutputCommitCoordinator
+2019-04-26 12:31:26 log: INFO: Logging initialized @14451ms
+2019-04-26 12:31:26 Server: INFO: jetty-9.3.z-SNAPSHOT
+2019-04-26 12:31:26 Server: INFO: Started @14763ms
+2019-04-26 12:31:26 AbstractConnector: INFO: Started ServerConnector@430a257d{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+2019-04-26 12:31:26 Utils: INFO: Successfully started service 'SparkUI' on port 4040.
+2019-04-26 12:31:26 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@431fcca6{/jobs,null,AVAILABLE,@Spark}
+2019-04-26 12:31:26 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@7cf3029{/jobs/json,null,AVAILABLE,@Spark}
+2019-04-26 12:31:26 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@2bd663c0{/jobs/job,null,AVAILABLE,@Spark}
+2019-04-26 12:31:26 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@6039a82b{/jobs/job/json,null,AVAILABLE,@Spark}
+2019-04-26 12:31:26 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@5e908343{/stages,null,AVAILABLE,@Spark}
+2019-04-26 12:31:26 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@2a1a8791{/stages/json,null,AVAILABLE,@Spark}
+2019-04-26 12:31:26 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@406f62b5{/stages/stage,null,AVAILABLE,@Spark}
+2019-04-26 12:31:26 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@1b6453a8{/stages/stage/json,null,AVAILABLE,@Spark}
+2019-04-26 12:31:26 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@24f08302{/stages/pool,null,AVAILABLE,@Spark}
+2019-04-26 12:31:26 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@12240c77{/stages/pool/json,null,AVAILABLE,@Spark}
+2019-04-26 12:31:26 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@39df43ea{/storage,null,AVAILABLE,@Spark}
+2019-04-26 12:31:26 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@75f2be4{/storage/json,null,AVAILABLE,@Spark}
+2019-04-26 12:31:26 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@64b1522a{/storage/rdd,null,AVAILABLE,@Spark}
+2019-04-26 12:31:26 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@79f2457e{/storage/rdd/json,null,AVAILABLE,@Spark}
+2019-04-26 12:31:26 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@2414c7ab{/environment,null,AVAILABLE,@Spark}
+2019-04-26 12:31:26 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@2abc16fd{/environment/json,null,AVAILABLE,@Spark}
+2019-04-26 12:31:26 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@35b62399{/executors,null,AVAILABLE,@Spark}
+2019-04-26 12:31:26 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@4d5b0482{/executors/json,null,AVAILABLE,@Spark}
+2019-04-26 12:31:26 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@1229baa6{/executors/threadDump,null,AVAILABLE,@Spark}
+2019-04-26 12:31:26 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@5782bb3b{/executors/threadDump/json,null,AVAILABLE,@Spark}
+2019-04-26 12:31:26 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@21c7def6{/static,null,AVAILABLE,@Spark}
+2019-04-26 12:31:26 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@397a6bdc{/,null,AVAILABLE,@Spark}
+2019-04-26 12:31:26 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@4596380d{/api,null,AVAILABLE,@Spark}
+2019-04-26 12:31:26 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@3622b7c7{/jobs/job/kill,null,AVAILABLE,@Spark}
+2019-04-26 12:31:26 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@528bf3f5{/stages/stage/kill,null,AVAILABLE,@Spark}
+2019-04-26 12:31:26 SparkUI: INFO: Bound SparkUI to 0.0.0.0, and started at http://192.168.0.15:4040
+2019-04-26 12:31:27 Executor: INFO: Starting executor ID driver on host localhost
+2019-04-26 12:31:27 Utils: INFO: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 35871.
+2019-04-26 12:31:27 NettyBlockTransferService: INFO: Server created on 192.168.0.15:35871
+2019-04-26 12:31:27 BlockManager: INFO: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+2019-04-26 12:31:27 BlockManagerMaster: INFO: Registering BlockManager BlockManagerId(driver, 192.168.0.15, 35871, None)
+2019-04-26 12:31:27 BlockManagerMasterEndpoint: INFO: Registering block manager 192.168.0.15:35871 with 366.3 MB RAM, BlockManagerId(driver, 192.168.0.15, 35871, None)
+2019-04-26 12:31:27 BlockManagerMaster: INFO: Registered BlockManager BlockManagerId(driver, 192.168.0.15, 35871, None)
+2019-04-26 12:31:27 BlockManager: INFO: Initialized BlockManager: BlockManagerId(driver, 192.168.0.15, 35871, None)
+2019-04-26 12:31:27 ContextHandler: INFO: Started o.s.j.s.ServletContextHandler@3f26e8dd{/metrics/json,null,AVAILABLE,@Spark}
+2019-04-26 12:31:28 Hail: INFO: Hail temporary directory: file:/tmp/hail.HKRPzHLojQG8
+2019-04-26 12:31:29 MemoryStore: INFO: Block broadcast_0 stored as values in memory (estimated size 237.2 KB, free 366.1 MB)
+2019-04-26 12:31:29 MemoryStore: INFO: Block broadcast_0_piece0 stored as bytes in memory (estimated size 23.0 KB, free 366.0 MB)
+2019-04-26 12:31:29 BlockManagerInfo: INFO: Added broadcast_0_piece0 in memory on 192.168.0.15:35871 (size: 23.0 KB, free: 366.3 MB)
+2019-04-26 12:31:29 SparkContext: INFO: Created broadcast 0 from broadcast at HailContext.scala:382
+2019-04-26 12:31:29 Hail: INFO: SparkUI: http://192.168.0.15:4040
+2019-04-26 12:31:29 Hail: INFO: Running Hail version 0.2.12-9409c0635781
+2019-04-26 12:31:36 MemoryStore: INFO: Block broadcast_1 stored as values in memory (estimated size 33.5 KB, free 366.0 MB)
+2019-04-26 12:31:36 MemoryStore: INFO: Block broadcast_1_piece0 stored as bytes in memory (estimated size 3.0 KB, free 366.0 MB)
+2019-04-26 12:31:36 BlockManagerInfo: INFO: Added broadcast_1_piece0 in memory on 192.168.0.15:35871 (size: 3.0 KB, free: 366.3 MB)
+2019-04-26 12:31:36 SparkContext: INFO: Created broadcast 1 from broadcast at ReferenceGenome.scala:454
+2019-04-26 12:31:36 MemoryStore: INFO: Block broadcast_2 stored as values in memory (estimated size 1643.2 KB, free 364.4 MB)
+2019-04-26 12:31:36 MemoryStore: INFO: Block broadcast_2_piece0 stored as bytes in memory (estimated size 108.5 KB, free 364.3 MB)
+2019-04-26 12:31:36 BlockManagerInfo: INFO: Added broadcast_2_piece0 in memory on 192.168.0.15:35871 (size: 108.5 KB, free: 366.2 MB)
+2019-04-26 12:31:36 SparkContext: INFO: Created broadcast 2 from broadcast at ReferenceGenome.scala:454
+2019-04-26 12:31:36 MemoryStore: INFO: Block broadcast_3 stored as values in memory (estimated size 8.7 KB, free 364.3 MB)
+2019-04-26 12:31:36 MemoryStore: INFO: Block broadcast_3_piece0 stored as bytes in memory (estimated size 1079.0 B, free 364.3 MB)
+2019-04-26 12:31:36 BlockManagerInfo: INFO: Added broadcast_3_piece0 in memory on 192.168.0.15:35871 (size: 1079.0 B, free: 366.2 MB)
+2019-04-26 12:31:36 SparkContext: INFO: Created broadcast 3 from broadcast at ReferenceGenome.scala:454
+2019-04-26 12:33:29 MemoryStore: INFO: Block broadcast_4 stored as values in memory (estimated size 25.0 KB, free 364.3 MB)
+2019-04-26 12:33:29 MemoryStore: INFO: Block broadcast_4_piece0 stored as bytes in memory (estimated size 2.6 KB, free 364.3 MB)
+2019-04-26 12:33:29 BlockManagerInfo: INFO: Added broadcast_4_piece0 in memory on 192.168.0.15:35871 (size: 2.6 KB, free: 366.2 MB)
+2019-04-26 12:33:29 SparkContext: INFO: Created broadcast 4 from broadcast at LoadVCF.scala:1020
+2019-04-26 12:33:29 SparkContext: INFO: Starting job: foreach at LoadVCF.scala:1026
+2019-04-26 12:33:29 DAGScheduler: INFO: Got job 0 (foreach at LoadVCF.scala:1026) with 1 output partitions
+2019-04-26 12:33:29 DAGScheduler: INFO: Final stage: ResultStage 0 (foreach at LoadVCF.scala:1026)
+2019-04-26 12:33:29 DAGScheduler: INFO: Parents of final stage: List()
+2019-04-26 12:33:29 DAGScheduler: INFO: Missing parents: List()
+2019-04-26 12:33:29 DAGScheduler: INFO: Submitting ResultStage 0 (ParallelCollectionRDD[0] at parallelize at LoadVCF.scala:1026), which has no missing parents
+2019-04-26 12:33:30 MemoryStore: INFO: Block broadcast_5 stored as values in memory (estimated size 3.9 KB, free 364.3 MB)
+2019-04-26 12:33:30 MemoryStore: INFO: Block broadcast_5_piece0 stored as bytes in memory (estimated size 2.4 KB, free 364.3 MB)
+2019-04-26 12:33:30 BlockManagerInfo: INFO: Added broadcast_5_piece0 in memory on 192.168.0.15:35871 (size: 2.4 KB, free: 366.2 MB)
+2019-04-26 12:33:30 SparkContext: INFO: Created broadcast 5 from broadcast at DAGScheduler.scala:1004
+2019-04-26 12:33:30 DAGScheduler: INFO: Submitting 1 missing tasks from ResultStage 0 (ParallelCollectionRDD[0] at parallelize at LoadVCF.scala:1026) (first 15 tasks are for partitions Vector(0))
+2019-04-26 12:33:30 TaskSchedulerImpl: INFO: Adding task set 0.0 with 1 tasks
+2019-04-26 12:33:30 TaskSetManager: INFO: Starting task 0.0 in stage 0.0 (TID 0, localhost, executor driver, partition 0, PROCESS_LOCAL, 4723 bytes)
+2019-04-26 12:33:30 Executor: INFO: Running task 0.0 in stage 0.0 (TID 0)
+2019-04-26 12:33:30 Executor: INFO: Finished task 0.0 in stage 0.0 (TID 0). 666 bytes result sent to driver
+2019-04-26 12:33:30 TaskSetManager: INFO: Finished task 0.0 in stage 0.0 (TID 0) in 253 ms on localhost (executor driver) (1/1)
+2019-04-26 12:33:30 TaskSchedulerImpl: INFO: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+2019-04-26 12:33:30 DAGScheduler: INFO: ResultStage 0 (foreach at LoadVCF.scala:1026) finished in 0,292 s
+2019-04-26 12:33:30 DAGScheduler: INFO: Job 0 finished: foreach at LoadVCF.scala:1026, took 0,568519 s
+2019-04-26 12:35:16 root: INFO: optimize (CompileAndEvaluate: first pass): before: IR size 3: 
+(TableCount
+  (MatrixRowsTable
+    (MatrixRead None False False "{\"name\":\"MatrixVCFReader\",\"files\":[\"data/1kg.vcf\"],\"callFields\":[\"PGT\"],\"entryFloatType\":\"Float64\",\"rg\":\"GRCh37\",\"contigRecoding\":{},\"arrayElementsRequired\":true,\"skipInvalidLoci\":false,\"gzAsBGZ\":false,\"forceGZ\":false,\"filterAndReplace\":{\"name\":\"TextInputFilterAndReplace\"},\"partitionsJSON\":null}")))
+2019-04-26 12:35:16 root: INFO: optimize (CompileAndEvaluate: first pass): after: IR size 3:
+(TableCount
+  (MatrixRowsTable
+    (MatrixRead Matrix{global:Struct{},col_key:[s],col:Struct{s:String},row_key:[[locus,alleles]],row:Struct{locus:Locus(GRCh37),alleles:Array[String]},entry:Struct{}} True False "{\"name\":\"MatrixVCFReader\",\"files\":[\"data/1kg.vcf\"],\"callFields\":[\"PGT\"],\"entryFloatType\":\"Float64\",\"rg\":\"GRCh37\",\"contigRecoding\":{},\"arrayElementsRequired\":true,\"skipInvalidLoci\":false,\"gzAsBGZ\":false,\"forceGZ\":false,\"filterAndReplace\":{\"name\":\"TextInputFilterAndReplace\"},\"partitionsJSON\":null}")))
+2019-04-26 12:35:16 root: INFO: optimize (CompileAndEvaluate: after Matrix lowering): before: IR size 16: 
+(TableCount
+  (TableMapRows
+    (TableMapGlobals
+      (TableMapGlobals
+        (TableMapRows
+          (TableRead Table{global:Struct{__cols:Array[Struct{s:String}]},key:[locus,alleles],row:Struct{locus:Locus(GRCh37),alleles:Array[String],`the entries! [877f12a8827e18f61222c6c8c5fb04a8]`:Array[Struct{}]}} False "{\"files\":[\"data/1kg.vcf\"],\"callFields\":[\"PGT\"],\"entryFloatType\":\"Float64\",\"rg\":\"GRCh37\",\"contigRecoding\":{},\"arrayElementsRequired\":true,\"skipInvalidLoci\":false,\"gzAsBGZ\":false,\"forceGZ\":false,\"filterAndReplace\":{\"name\":\"TextInputFilterAndReplace\"},\"partitionsJSON\":null}")
+          (InsertFields
+            (Ref row)
+            None
+            (`the entries! [877f12a8827e18f61222c6c8c5fb04a8]`
+              (MakeArray Array[Struct{}]))))
+        (InsertFields
+          (Ref global)
+          None
+          (__cols
+            (MakeArray Array[Struct{s:String}]))))
+      (SelectFields ()
+        (Ref global)))
+    (SelectFields (locus alleles)
+      (Ref row))))
+2019-04-26 12:35:16 root: INFO: optimize (CompileAndEvaluate: after Matrix lowering): after: IR size 2:
+(TableCount
+  (TableRead Table{global:Struct{},key:[locus,alleles],row:Struct{locus:Locus(GRCh37),alleles:Array[String]}} False "{\"files\":[\"data/1kg.vcf\"],\"callFields\":[\"PGT\"],\"entryFloatType\":\"Float64\",\"rg\":\"GRCh37\",\"contigRecoding\":{},\"arrayElementsRequired\":true,\"skipInvalidLoci\":false,\"gzAsBGZ\":false,\"forceGZ\":false,\"filterAndReplace\":{\"name\":\"TextInputFilterAndReplace\"},\"partitionsJSON\":null}"))
+2019-04-26 12:35:16 MemoryStore: INFO: Block broadcast_6 stored as values in memory (estimated size 20.7 KB, free 364.2 MB)
+2019-04-26 12:35:16 MemoryStore: INFO: Block broadcast_6_piece0 stored as bytes in memory (estimated size 3.0 KB, free 364.2 MB)
+2019-04-26 12:35:16 BlockManagerInfo: INFO: Added broadcast_6_piece0 in memory on 192.168.0.15:35871 (size: 3.0 KB, free: 366.2 MB)
+2019-04-26 12:35:16 SparkContext: INFO: Created broadcast 6 from broadcast at LoadVCF.scala:1112
+2019-04-26 12:35:16 MemoryStore: INFO: Block broadcast_7 stored as values in memory (estimated size 237.2 KB, free 364.0 MB)
+2019-04-26 12:35:16 MemoryStore: INFO: Block broadcast_7_piece0 stored as bytes in memory (estimated size 23.0 KB, free 364.0 MB)
+2019-04-26 12:35:16 BlockManagerInfo: INFO: Added broadcast_7_piece0 in memory on 192.168.0.15:35871 (size: 23.0 KB, free: 366.1 MB)
+2019-04-26 12:35:16 SparkContext: INFO: Created broadcast 7 from textFile at RichSparkContext.scala:16
+2019-04-26 12:35:16 FileInputFormat: INFO: Total input paths to process : 1
+2019-04-26 12:35:17 BlockManagerInfo: INFO: Removed broadcast_5_piece0 on 192.168.0.15:35871 in memory (size: 2.4 KB, free: 366.1 MB)
+2019-04-26 12:35:17 BlockManagerInfo: INFO: Removed broadcast_4_piece0 on 192.168.0.15:35871 in memory (size: 2.6 KB, free: 366.1 MB)
+2019-04-26 12:35:17 SparkContext: INFO: Starting job: collect at ContextRDD.scala:196
+2019-04-26 12:35:17 DAGScheduler: INFO: Got job 1 (collect at ContextRDD.scala:196) with 3 output partitions
+2019-04-26 12:35:17 DAGScheduler: INFO: Final stage: ResultStage 1 (collect at ContextRDD.scala:196)
+2019-04-26 12:35:17 DAGScheduler: INFO: Parents of final stage: List()
+2019-04-26 12:35:17 DAGScheduler: INFO: Missing parents: List()
+2019-04-26 12:35:17 DAGScheduler: INFO: Submitting ResultStage 1 (MapPartitionsRDD[8] at mapPartitions at ContextRDD.scala:190), which has no missing parents
+2019-04-26 12:35:17 MemoryStore: INFO: Block broadcast_8 stored as values in memory (estimated size 19.8 KB, free 364.0 MB)
+2019-04-26 12:35:17 MemoryStore: INFO: Block broadcast_8_piece0 stored as bytes in memory (estimated size 9.4 KB, free 364.0 MB)
+2019-04-26 12:35:17 BlockManagerInfo: INFO: Added broadcast_8_piece0 in memory on 192.168.0.15:35871 (size: 9.4 KB, free: 366.1 MB)
+2019-04-26 12:35:17 SparkContext: INFO: Created broadcast 8 from broadcast at DAGScheduler.scala:1004
+2019-04-26 12:35:17 DAGScheduler: INFO: Submitting 3 missing tasks from ResultStage 1 (MapPartitionsRDD[8] at mapPartitions at ContextRDD.scala:190) (first 15 tasks are for partitions Vector(0, 1, 2))
+2019-04-26 12:35:17 TaskSchedulerImpl: INFO: Adding task set 1.0 with 3 tasks
+2019-04-26 12:35:17 TaskSetManager: INFO: Starting task 0.0 in stage 1.0 (TID 1, localhost, executor driver, partition 0, PROCESS_LOCAL, 4874 bytes)
+2019-04-26 12:35:17 TaskSetManager: INFO: Starting task 1.0 in stage 1.0 (TID 2, localhost, executor driver, partition 1, PROCESS_LOCAL, 4874 bytes)
+2019-04-26 12:35:17 TaskSetManager: INFO: Starting task 2.0 in stage 1.0 (TID 3, localhost, executor driver, partition 2, PROCESS_LOCAL, 4874 bytes)
+2019-04-26 12:35:17 Executor: INFO: Running task 0.0 in stage 1.0 (TID 1)
+2019-04-26 12:35:17 Executor: INFO: Running task 1.0 in stage 1.0 (TID 2)
+2019-04-26 12:35:17 Executor: INFO: Running task 2.0 in stage 1.0 (TID 3)
+2019-04-26 12:35:17 HadoopRDD: INFO: Input split: file:/home/samuel/Pesquisa/hail.comparison/data/1kg.vcf:67108864+4218234
+2019-04-26 12:35:17 HadoopRDD: INFO: Input split: file:/home/samuel/Pesquisa/hail.comparison/data/1kg.vcf:33554432+33554432
+2019-04-26 12:35:17 HadoopRDD: INFO: Input split: file:/home/samuel/Pesquisa/hail.comparison/data/1kg.vcf:0+33554432
+2019-04-26 12:35:17 Executor: INFO: Finished task 2.0 in stage 1.0 (TID 3). 1725 bytes result sent to driver
+2019-04-26 12:35:18 TaskSetManager: INFO: Finished task 2.0 in stage 1.0 (TID 3) in 678 ms on localhost (executor driver) (1/3)
+2019-04-26 12:35:18 Executor: INFO: Finished task 0.0 in stage 1.0 (TID 1). 1728 bytes result sent to driver
+2019-04-26 12:35:18 Executor: INFO: Finished task 1.0 in stage 1.0 (TID 2). 1679 bytes result sent to driver
+2019-04-26 12:35:18 TaskSetManager: INFO: Finished task 0.0 in stage 1.0 (TID 1) in 872 ms on localhost (executor driver) (2/3)
+2019-04-26 12:35:18 TaskSetManager: INFO: Finished task 1.0 in stage 1.0 (TID 2) in 843 ms on localhost (executor driver) (3/3)
+2019-04-26 12:35:18 TaskSchedulerImpl: INFO: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+2019-04-26 12:35:18 DAGScheduler: INFO: ResultStage 1 (collect at ContextRDD.scala:196) finished in 0,877 s
+2019-04-26 12:35:18 DAGScheduler: INFO: Job 1 finished: collect at ContextRDD.scala:196, took 0,891390 s
+2019-04-26 12:35:18 Hail: INFO: Coerced sorted dataset
+2019-04-26 12:35:18 SparkContext: INFO: Starting job: fold at RVD.scala:592
+2019-04-26 12:35:18 DAGScheduler: INFO: Got job 2 (fold at RVD.scala:592) with 3 output partitions
+2019-04-26 12:35:18 DAGScheduler: INFO: Final stage: ResultStage 2 (fold at RVD.scala:592)
+2019-04-26 12:35:18 DAGScheduler: INFO: Parents of final stage: List()
+2019-04-26 12:35:18 DAGScheduler: INFO: Missing parents: List()
+2019-04-26 12:35:18 DAGScheduler: INFO: Submitting ResultStage 2 (MapPartitionsRDD[11] at mapPartitions at ContextRDD.scala:190), which has no missing parents
+2019-04-26 12:35:18 MemoryStore: INFO: Block broadcast_9 stored as values in memory (estimated size 17.7 KB, free 364.0 MB)
+2019-04-26 12:35:18 MemoryStore: INFO: Block broadcast_9_piece0 stored as bytes in memory (estimated size 8.6 KB, free 364.0 MB)
+2019-04-26 12:35:18 BlockManagerInfo: INFO: Added broadcast_9_piece0 in memory on 192.168.0.15:35871 (size: 8.6 KB, free: 366.1 MB)
+2019-04-26 12:35:18 SparkContext: INFO: Created broadcast 9 from broadcast at DAGScheduler.scala:1004
+2019-04-26 12:35:18 DAGScheduler: INFO: Submitting 3 missing tasks from ResultStage 2 (MapPartitionsRDD[11] at mapPartitions at ContextRDD.scala:190) (first 15 tasks are for partitions Vector(0, 1, 2))
+2019-04-26 12:35:18 TaskSchedulerImpl: INFO: Adding task set 2.0 with 3 tasks
+2019-04-26 12:35:18 TaskSetManager: INFO: Starting task 0.0 in stage 2.0 (TID 4, localhost, executor driver, partition 0, PROCESS_LOCAL, 4874 bytes)
+2019-04-26 12:35:18 TaskSetManager: INFO: Starting task 1.0 in stage 2.0 (TID 5, localhost, executor driver, partition 1, PROCESS_LOCAL, 4874 bytes)
+2019-04-26 12:35:18 TaskSetManager: INFO: Starting task 2.0 in stage 2.0 (TID 6, localhost, executor driver, partition 2, PROCESS_LOCAL, 4874 bytes)
+2019-04-26 12:35:18 Executor: INFO: Running task 1.0 in stage 2.0 (TID 5)
+2019-04-26 12:35:18 Executor: INFO: Running task 2.0 in stage 2.0 (TID 6)
+2019-04-26 12:35:18 Executor: INFO: Running task 0.0 in stage 2.0 (TID 4)
+2019-04-26 12:35:18 HadoopRDD: INFO: Input split: file:/home/samuel/Pesquisa/hail.comparison/data/1kg.vcf:67108864+4218234
+2019-04-26 12:35:18 HadoopRDD: INFO: Input split: file:/home/samuel/Pesquisa/hail.comparison/data/1kg.vcf:33554432+33554432
+2019-04-26 12:35:18 HadoopRDD: INFO: Input split: file:/home/samuel/Pesquisa/hail.comparison/data/1kg.vcf:0+33554432
+2019-04-26 12:35:18 Executor: INFO: Finished task 2.0 in stage 2.0 (TID 6). 796 bytes result sent to driver
+2019-04-26 12:35:18 TaskSetManager: INFO: Finished task 2.0 in stage 2.0 (TID 6) in 248 ms on localhost (executor driver) (1/3)
+2019-04-26 12:35:18 Executor: INFO: Finished task 0.0 in stage 2.0 (TID 4). 839 bytes result sent to driver
+2019-04-26 12:35:18 TaskSetManager: INFO: Finished task 0.0 in stage 2.0 (TID 4) in 541 ms on localhost (executor driver) (2/3)
+2019-04-26 12:35:18 Executor: INFO: Finished task 1.0 in stage 2.0 (TID 5). 796 bytes result sent to driver
+2019-04-26 12:35:18 TaskSetManager: INFO: Finished task 1.0 in stage 2.0 (TID 5) in 542 ms on localhost (executor driver) (3/3)
+2019-04-26 12:35:18 TaskSchedulerImpl: INFO: Removed TaskSet 2.0, whose tasks have all completed, from pool 
+2019-04-26 12:35:18 DAGScheduler: INFO: ResultStage 2 (fold at RVD.scala:592) finished in 0,543 s
+2019-04-26 12:35:18 DAGScheduler: INFO: Job 2 finished: fold at RVD.scala:592, took 0,554368 s
+2019-04-26 12:35:19 root: INFO: is/hail/codegen/generated/C0.<init> instruction count: 3
+2019-04-26 12:35:19 root: INFO: is/hail/codegen/generated/C0.apply instruction count: 53
+2019-04-26 12:35:19 root: INFO: is/hail/codegen/generated/C0.apply instruction count: 28
+2019-04-26 12:35:19 root: INFO: is/hail/codegen/generated/C0.setPartitionIndex instruction count: 14
+2019-04-26 12:35:21 root: INFO: optimize (CompileAndEvaluate: first pass): before: IR size 3: 
+(TableCount
+  (MatrixColsTable
+    (MatrixRead None False False "{\"name\":\"MatrixVCFReader\",\"files\":[\"data/1kg.vcf\"],\"callFields\":[\"PGT\"],\"entryFloatType\":\"Float64\",\"rg\":\"GRCh37\",\"contigRecoding\":{},\"arrayElementsRequired\":true,\"skipInvalidLoci\":false,\"gzAsBGZ\":false,\"forceGZ\":false,\"filterAndReplace\":{\"name\":\"TextInputFilterAndReplace\"},\"partitionsJSON\":null}")))
+2019-04-26 12:35:21 root: INFO: optimize (CompileAndEvaluate: first pass): after: IR size 1:
+(I64 284)
+2019-04-26 12:35:21 root: INFO: optimize (CompileAndEvaluate: after Matrix lowering): before: IR size 1: 
+(I64 284)
+2019-04-26 12:35:21 root: INFO: optimize (CompileAndEvaluate: after Matrix lowering): after: IR size 1:
+(I64 284)
+2019-04-26 12:35:21 root: INFO: is/hail/codegen/generated/C1.<init> instruction count: 3
+2019-04-26 12:35:21 root: INFO: is/hail/codegen/generated/C1.apply instruction count: 53
+2019-04-26 12:35:21 root: INFO: is/hail/codegen/generated/C1.apply instruction count: 28
+2019-04-26 12:35:21 root: INFO: is/hail/codegen/generated/C1.setPartitionIndex instruction count: 14
+2019-04-26 12:36:11 root: INFO: optimize (CompileAndEvaluate: first pass): before: IR size 3: 
+(TableCount
+  (MatrixColsTable
+    (MatrixRead None False False "{\"name\":\"MatrixVCFReader\",\"files\":[\"data/1kg.vcf\"],\"callFields\":[\"PGT\"],\"entryFloatType\":\"Float64\",\"rg\":\"GRCh37\",\"contigRecoding\":{},\"arrayElementsRequired\":true,\"skipInvalidLoci\":false,\"gzAsBGZ\":false,\"forceGZ\":false,\"filterAndReplace\":{\"name\":\"TextInputFilterAndReplace\"},\"partitionsJSON\":null}")))
+2019-04-26 12:36:11 root: INFO: optimize (CompileAndEvaluate: first pass): after: IR size 1:
+(I64 284)
+2019-04-26 12:36:11 root: INFO: optimize (CompileAndEvaluate: after Matrix lowering): before: IR size 1: 
+(I64 284)
+2019-04-26 12:36:11 root: INFO: optimize (CompileAndEvaluate: after Matrix lowering): after: IR size 1:
+(I64 284)
+2019-04-26 12:36:11 root: INFO: is/hail/codegen/generated/C2.<init> instruction count: 3
+2019-04-26 12:36:11 root: INFO: is/hail/codegen/generated/C2.apply instruction count: 53
+2019-04-26 12:36:11 root: INFO: is/hail/codegen/generated/C2.apply instruction count: 28
+2019-04-26 12:36:11 root: INFO: is/hail/codegen/generated/C2.setPartitionIndex instruction count: 14
+2019-04-26 12:36:30 root: INFO: optimize (CompileAndEvaluate: first pass): before: IR size 24: 
+(TableAggregate
+  (MatrixColsTable
+    (MatrixRead None False False "{\"name\":\"MatrixVCFReader\",\"files\":[\"data/1kg.vcf\"],\"callFields\":[\"PGT\"],\"entryFloatType\":\"Float64\",\"rg\":\"GRCh37\",\"contigRecoding\":{},\"arrayElementsRequired\":true,\"skipInvalidLoci\":false,\"gzAsBGZ\":false,\"forceGZ\":false,\"filterAndReplace\":{\"name\":\"TextInputFilterAndReplace\"},\"partitionsJSON\":null}"))
+  (MakeTuple
+    (ApplyAggOp Count
+      ()
+      None
+      ())
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField s
+              (Ref row))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (Apply length
+            (GetField s
+              (Ref row))))))
+    (AggFilter False
+      (ApplyUnaryPrimOp Bang
+        (IsNA
+          (GetField s
+            (Ref row))))
+      (ApplyAggOp Take
+        (
+          (I32 5))
+        None
+        (
+          (GetField s
+            (Ref row)))))))
+2019-04-26 12:36:30 root: INFO: optimize (CompileAndEvaluate: first pass): after: IR size 24:
+(TableAggregate
+  (MatrixColsTable
+    (MatrixRead Matrix{global:Struct{},col_key:[s],col:Struct{s:String},row_key:[[locus,alleles]],row:Struct{locus:Locus(GRCh37),alleles:Array[String]},entry:Struct{}} False True "{\"name\":\"MatrixVCFReader\",\"files\":[\"data/1kg.vcf\"],\"callFields\":[\"PGT\"],\"entryFloatType\":\"Float64\",\"rg\":\"GRCh37\",\"contigRecoding\":{},\"arrayElementsRequired\":true,\"skipInvalidLoci\":false,\"gzAsBGZ\":false,\"forceGZ\":false,\"filterAndReplace\":{\"name\":\"TextInputFilterAndReplace\"},\"partitionsJSON\":null}"))
+  (MakeTuple
+    (ApplyAggOp Count
+      ()
+      None
+      ())
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField s
+              (Ref row))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (Apply length
+            (GetField s
+              (Ref row))))))
+    (AggFilter False
+      (ApplyUnaryPrimOp Bang
+        (IsNA
+          (GetField s
+            (Ref row))))
+      (ApplyAggOp Take
+        (
+          (I32 5))
+        None
+        (
+          (GetField s
+            (Ref row)))))))
+2019-04-26 12:36:30 root: INFO: optimize (CompileAndEvaluate: after Matrix lowering): before: IR size 66: 
+(TableAggregate
+  (TableKeyBy (s) False
+    (TableParallelize None
+      (Let __cols_and_globals
+        (TableGetGlobals
+          (TableRead Table{global:Struct{__cols:Array[Struct{s:String}]},key:[locus,alleles],row:Struct{locus:Locus(GRCh37),alleles:Array[String],`the entries! [877f12a8827e18f61222c6c8c5fb04a8]`:Array[Struct{}]}} True "{\"files\":[\"data/1kg.vcf\"],\"callFields\":[\"PGT\"],\"entryFloatType\":\"Float64\",\"rg\":\"GRCh37\",\"contigRecoding\":{},\"arrayElementsRequired\":true,\"skipInvalidLoci\":false,\"gzAsBGZ\":false,\"forceGZ\":false,\"filterAndReplace\":{\"name\":\"TextInputFilterAndReplace\"},\"partitionsJSON\":null}"))
+        (MakeStruct
+          (rows
+            (ArrayMap elt
+              (ArraySort __iruid_12 __iruid_13
+                (ArrayMap i
+                  (ArrayRange
+                    (I32 0)
+                    (ArrayLen
+                      (GetField __cols
+                        (Ref __cols_and_globals)))
+                    (I32 1))
+                  (Let __cols_element
+                    (ArrayRef
+                      (GetField __cols
+                        (Ref __cols_and_globals))
+                      (Ref i))
+                    (MakeStruct
+                      (_1
+                        (SelectFields (s)
+                          (Ref __cols_element)))
+                      (_2
+                        (Ref __cols_element)))))
+                (If
+                  (True)
+                  (ApplyComparisonOp LT
+                    (ApplyComparisonOp Compare
+                      (GetField _1
+                        (Ref __iruid_12))
+                      (GetField _1
+                        (Ref __iruid_13)))
+                    (I32 0))
+                  (ApplyComparisonOp GT
+                    (ApplyComparisonOp Compare
+                      (GetField _1
+                        (Ref __iruid_12))
+                      (GetField _1
+                        (Ref __iruid_13)))
+                    (I32 0))))
+              (GetField _2
+                (Ref elt))))
+          (global
+            (SelectFields ()
+              (Ref __cols_and_globals)))))))
+  (MakeTuple
+    (ApplyAggOp Count
+      ()
+      None
+      ())
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField s
+              (Ref row))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (Apply length
+            (GetField s
+              (Ref row))))))
+    (AggFilter False
+      (ApplyUnaryPrimOp Bang
+        (IsNA
+          (GetField s
+            (Ref row))))
+      (ApplyAggOp Take
+        (
+          (I32 5))
+        None
+        (
+          (GetField s
+            (Ref row)))))))
+2019-04-26 12:36:30 root: INFO: optimize (CompileAndEvaluate: after Matrix lowering): after: IR size 56:
+(TableAggregate
+  (TableKeyBy (s) False
+    (TableParallelize None
+      (Let __cols_and_globals
+        (TableGetGlobals
+          (TableRead Table{global:Struct{__cols:Array[Struct{s:String}]},key:[locus,alleles],row:Struct{locus:Locus(GRCh37),alleles:Array[String]}} True "{\"files\":[\"data/1kg.vcf\"],\"callFields\":[\"PGT\"],\"entryFloatType\":\"Float64\",\"rg\":\"GRCh37\",\"contigRecoding\":{},\"arrayElementsRequired\":true,\"skipInvalidLoci\":false,\"gzAsBGZ\":false,\"forceGZ\":false,\"filterAndReplace\":{\"name\":\"TextInputFilterAndReplace\"},\"partitionsJSON\":null}"))
+        (MakeStruct
+          (rows
+            (ArrayMap elt
+              (ArraySort __iruid_12 __iruid_13
+                (ArrayMap i
+                  (ArrayRange
+                    (I32 0)
+                    (ArrayLen
+                      (GetField __cols
+                        (Ref __cols_and_globals)))
+                    (I32 1))
+                  (Let __cols_element
+                    (ArrayRef
+                      (GetField __cols
+                        (Ref __cols_and_globals))
+                      (Ref i))
+                    (MakeStruct
+                      (_1
+                        (Ref __cols_element))
+                      (_2
+                        (Ref __cols_element)))))
+                (ApplyComparisonOp LT
+                  (ApplyComparisonOp Compare
+                    (GetField _1
+                      (Ref __iruid_12))
+                    (GetField _1
+                      (Ref __iruid_13)))
+                  (I32 0)))
+              (GetField _2
+                (Ref elt))))
+          (global
+            (SelectFields ()
+              (Ref __cols_and_globals)))))))
+  (MakeTuple
+    (ApplyAggOp Count
+      ()
+      None
+      ())
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField s
+              (Ref row))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (Apply length
+            (GetField s
+              (Ref row))))))
+    (AggFilter False
+      (ApplyUnaryPrimOp Bang
+        (IsNA
+          (GetField s
+            (Ref row))))
+      (ApplyAggOp Take
+        (
+          (I32 5))
+        None
+        (
+          (GetField s
+            (Ref row)))))))
+2019-04-26 12:36:30 root: INFO: is/hail/codegen/generated/C3.<init> instruction count: 3
+2019-04-26 12:36:30 root: INFO: is/hail/codegen/generated/C3.apply instruction count: 18
+2019-04-26 12:36:30 root: INFO: is/hail/codegen/generated/C3.apply instruction count: 7
+2019-04-26 12:36:30 root: INFO: is/hail/codegen/generated/C3.setPartitionIndex instruction count: 14
+2019-04-26 12:36:30 root: INFO: is/hail/codegen/generated/C4.<init> instruction count: 3
+2019-04-26 12:36:30 root: INFO: is/hail/codegen/generated/C4.apply instruction count: 18
+2019-04-26 12:36:30 root: INFO: is/hail/codegen/generated/C4.apply instruction count: 7
+2019-04-26 12:36:30 root: INFO: is/hail/codegen/generated/C4.setPartitionIndex instruction count: 14
+2019-04-26 12:36:30 root: INFO: is/hail/codegen/generated/C5.<init> instruction count: 3
+2019-04-26 12:36:30 root: INFO: is/hail/codegen/generated/C5.apply instruction count: 18
+2019-04-26 12:36:30 root: INFO: is/hail/codegen/generated/C5.apply instruction count: 7
+2019-04-26 12:36:30 root: INFO: is/hail/codegen/generated/C5.setPartitionIndex instruction count: 14
+2019-04-26 12:36:30 root: INFO: is/hail/codegen/generated/C6.<init> instruction count: 3
+2019-04-26 12:36:30 root: INFO: is/hail/codegen/generated/C6.apply instruction count: 41
+2019-04-26 12:36:30 root: INFO: is/hail/codegen/generated/C6.apply instruction count: 7
+2019-04-26 12:36:30 root: INFO: is/hail/codegen/generated/C6.setPartitionIndex instruction count: 14
+2019-04-26 12:36:30 root: INFO: initop (Begin)
+2019-04-26 12:36:30 root: INFO: is/hail/codegen/generated/C7.<init> instruction count: 3
+2019-04-26 12:36:30 root: INFO: is/hail/codegen/generated/C7.apply instruction count: 15
+2019-04-26 12:36:30 root: INFO: is/hail/codegen/generated/C7.apply instruction count: 16
+2019-04-26 12:36:30 root: INFO: is/hail/codegen/generated/C7.setPartitionIndex instruction count: 14
+2019-04-26 12:36:30 root: INFO: seqop (Begin
+  (SeqOp (Count  () None ())
+    (I32 0)
+    ())
+  (SeqOp (Sum  () None (Int64))
+    (I32 1)
+    (
+      (Apply toInt64
+        (IsNA
+          (GetField s
+            (Ref row))))))
+  (SeqOp (Statistics  () None (Float64))
+    (I32 2)
+    (
+      (Let __iruid_17
+        (Apply length
+          (GetField s
+            (Ref row)))
+        (Cast Float64
+          (Ref __iruid_17)))))
+  (If
+    (ApplyUnaryPrimOp Bang
+      (IsNA
+        (GetField s
+          (Ref row))))
+    (Begin
+      (SeqOp (Take  (Int32) None (String))
+        (I32 3)
+        (
+          (GetField s
+            (Ref row)))))
+    (Begin)))
+2019-04-26 12:36:30 root: INFO: is/hail/codegen/generated/C8.<init> instruction count: 3
+2019-04-26 12:36:30 root: INFO: is/hail/codegen/generated/C8.apply instruction count: 23
+2019-04-26 12:36:30 root: INFO: is/hail/codegen/generated/C8.apply instruction count: 22
+2019-04-26 12:36:30 root: INFO: is/hail/codegen/generated/C8.method1 instruction count: 262
+2019-04-26 12:36:30 root: INFO: is/hail/codegen/generated/C8.method2 instruction count: 5
+2019-04-26 12:36:30 root: INFO: is/hail/codegen/generated/C8.method3 instruction count: 8
+2019-04-26 12:36:30 root: INFO: is/hail/codegen/generated/C8.setPartitionIndex instruction count: 14
+2019-04-26 12:36:30 root: INFO: is/hail/codegen/generated/C9.<init> instruction count: 3
+2019-04-26 12:36:30 root: INFO: is/hail/codegen/generated/C9.apply instruction count: 43
+2019-04-26 12:36:30 root: INFO: is/hail/codegen/generated/C9.apply instruction count: 22
+2019-04-26 12:36:30 root: INFO: is/hail/codegen/generated/C9.method1 instruction count: 49
+2019-04-26 12:36:30 root: INFO: is/hail/codegen/generated/C9.method2 instruction count: 181
+2019-04-26 12:36:30 root: INFO: is/hail/codegen/generated/C9.setPartitionIndex instruction count: 14
+2019-04-26 12:36:30 MemoryStore: INFO: Block broadcast_10 stored as values in memory (estimated size 20.7 KB, free 363.9 MB)
+2019-04-26 12:36:30 MemoryStore: INFO: Block broadcast_10_piece0 stored as bytes in memory (estimated size 3.0 KB, free 363.9 MB)
+2019-04-26 12:36:30 BlockManagerInfo: INFO: Added broadcast_10_piece0 in memory on 192.168.0.15:35871 (size: 3.0 KB, free: 366.1 MB)
+2019-04-26 12:36:30 SparkContext: INFO: Created broadcast 10 from broadcast at LoadVCF.scala:1112
+2019-04-26 12:36:30 root: INFO: is/hail/codegen/generated/C11.<init> instruction count: 3
+2019-04-26 12:36:30 root: INFO: is/hail/codegen/generated/C11.apply instruction count: 11
+2019-04-26 12:36:30 root: INFO: is/hail/codegen/generated/C11.apply instruction count: 14
+2019-04-26 12:36:30 root: INFO: is/hail/codegen/generated/C11.method1 instruction count: 114
+2019-04-26 12:36:30 root: INFO: is/hail/codegen/generated/C11.method2 instruction count: 45
+2019-04-26 12:36:30 root: INFO: is/hail/codegen/generated/C11.method3 instruction count: 94
+2019-04-26 12:36:30 root: INFO: is/hail/codegen/generated/C11.method4 instruction count: 102
+2019-04-26 12:36:30 root: INFO: is/hail/codegen/generated/C10.<init> instruction count: 3
+2019-04-26 12:36:30 root: INFO: is/hail/codegen/generated/C10.apply instruction count: 45
+2019-04-26 12:36:30 root: INFO: is/hail/codegen/generated/C10.apply instruction count: 28
+2019-04-26 12:36:30 root: INFO: is/hail/codegen/generated/C10.method1 instruction count: 95
+2019-04-26 12:36:30 root: INFO: is/hail/codegen/generated/C10.method2 instruction count: 1033
+2019-04-26 12:36:30 root: INFO: is/hail/codegen/generated/C10.setPartitionIndex instruction count: 14
+2019-04-26 12:36:30 root: INFO: parallelized 284 rows
+2019-04-26 12:36:30 SparkContext: INFO: Starting job: collect at ContextRDD.scala:196
+2019-04-26 12:36:30 DAGScheduler: INFO: Got job 3 (collect at ContextRDD.scala:196) with 2 output partitions
+2019-04-26 12:36:30 DAGScheduler: INFO: Final stage: ResultStage 3 (collect at ContextRDD.scala:196)
+2019-04-26 12:36:30 DAGScheduler: INFO: Parents of final stage: List()
+2019-04-26 12:36:30 DAGScheduler: INFO: Missing parents: List()
+2019-04-26 12:36:30 DAGScheduler: INFO: Submitting ResultStage 3 (MapPartitionsRDD[18] at mapPartitions at ContextRDD.scala:190), which has no missing parents
+2019-04-26 12:36:30 MemoryStore: INFO: Block broadcast_11 stored as values in memory (estimated size 8.7 KB, free 363.9 MB)
+2019-04-26 12:36:30 MemoryStore: INFO: Block broadcast_11_piece0 stored as bytes in memory (estimated size 4.6 KB, free 363.9 MB)
+2019-04-26 12:36:30 BlockManagerInfo: INFO: Added broadcast_11_piece0 in memory on 192.168.0.15:35871 (size: 4.6 KB, free: 366.1 MB)
+2019-04-26 12:36:30 SparkContext: INFO: Created broadcast 11 from broadcast at DAGScheduler.scala:1004
+2019-04-26 12:36:30 DAGScheduler: INFO: Submitting 2 missing tasks from ResultStage 3 (MapPartitionsRDD[18] at mapPartitions at ContextRDD.scala:190) (first 15 tasks are for partitions Vector(0, 1))
+2019-04-26 12:36:30 TaskSchedulerImpl: INFO: Adding task set 3.0 with 2 tasks
+2019-04-26 12:36:30 TaskSetManager: INFO: Starting task 0.0 in stage 3.0 (TID 7, localhost, executor driver, partition 0, PROCESS_LOCAL, 6936 bytes)
+2019-04-26 12:36:30 TaskSetManager: INFO: Starting task 1.0 in stage 3.0 (TID 8, localhost, executor driver, partition 1, PROCESS_LOCAL, 6936 bytes)
+2019-04-26 12:36:31 Executor: INFO: Running task 0.0 in stage 3.0 (TID 7)
+2019-04-26 12:36:31 Executor: INFO: Running task 1.0 in stage 3.0 (TID 8)
+2019-04-26 12:36:31 Executor: INFO: Finished task 0.0 in stage 3.0 (TID 7). 1136 bytes result sent to driver
+2019-04-26 12:36:31 TaskSetManager: INFO: Finished task 0.0 in stage 3.0 (TID 7) in 32 ms on localhost (executor driver) (1/2)
+2019-04-26 12:36:31 Executor: INFO: Finished task 1.0 in stage 3.0 (TID 8). 1136 bytes result sent to driver
+2019-04-26 12:36:31 TaskSetManager: INFO: Finished task 1.0 in stage 3.0 (TID 8) in 36 ms on localhost (executor driver) (2/2)
+2019-04-26 12:36:31 TaskSchedulerImpl: INFO: Removed TaskSet 3.0, whose tasks have all completed, from pool 
+2019-04-26 12:36:31 DAGScheduler: INFO: ResultStage 3 (collect at ContextRDD.scala:196) finished in 0,040 s
+2019-04-26 12:36:31 DAGScheduler: INFO: Job 3 finished: collect at ContextRDD.scala:196, took 0,053518 s
+2019-04-26 12:36:31 Hail: INFO: Coerced sorted dataset
+2019-04-26 12:36:31 MemoryStore: INFO: Block broadcast_12 stored as values in memory (estimated size 56.0 B, free 363.9 MB)
+2019-04-26 12:36:31 MemoryStore: INFO: Block broadcast_12_piece0 stored as bytes in memory (estimated size 67.0 B, free 363.9 MB)
+2019-04-26 12:36:31 BlockManagerInfo: INFO: Added broadcast_12_piece0 in memory on 192.168.0.15:35871 (size: 67.0 B, free: 366.1 MB)
+2019-04-26 12:36:31 SparkContext: INFO: Created broadcast 12 from broadcast at BroadcastValue.scala:16
+2019-04-26 12:36:31 SparkContext: INFO: Starting job: runJob at RVD.scala:558
+2019-04-26 12:36:31 DAGScheduler: INFO: Got job 4 (runJob at RVD.scala:558) with 2 output partitions
+2019-04-26 12:36:31 DAGScheduler: INFO: Final stage: ResultStage 4 (runJob at RVD.scala:558)
+2019-04-26 12:36:31 DAGScheduler: INFO: Parents of final stage: List()
+2019-04-26 12:36:31 DAGScheduler: INFO: Missing parents: List()
+2019-04-26 12:36:31 DAGScheduler: INFO: Submitting ResultStage 4 (MapPartitionsRDD[20] at mapPartitions at ContextRDD.scala:190), which has no missing parents
+2019-04-26 12:36:31 MemoryStore: INFO: Block broadcast_13 stored as values in memory (estimated size 12.5 KB, free 363.9 MB)
+2019-04-26 12:36:31 MemoryStore: INFO: Block broadcast_13_piece0 stored as bytes in memory (estimated size 6.8 KB, free 363.9 MB)
+2019-04-26 12:36:31 BlockManagerInfo: INFO: Added broadcast_13_piece0 in memory on 192.168.0.15:35871 (size: 6.8 KB, free: 366.1 MB)
+2019-04-26 12:36:31 SparkContext: INFO: Created broadcast 13 from broadcast at DAGScheduler.scala:1004
+2019-04-26 12:36:31 DAGScheduler: INFO: Submitting 2 missing tasks from ResultStage 4 (MapPartitionsRDD[20] at mapPartitions at ContextRDD.scala:190) (first 15 tasks are for partitions Vector(0, 1))
+2019-04-26 12:36:31 TaskSchedulerImpl: INFO: Adding task set 4.0 with 2 tasks
+2019-04-26 12:36:31 TaskSetManager: INFO: Starting task 0.0 in stage 4.0 (TID 9, localhost, executor driver, partition 0, PROCESS_LOCAL, 6936 bytes)
+2019-04-26 12:36:31 TaskSetManager: INFO: Starting task 1.0 in stage 4.0 (TID 10, localhost, executor driver, partition 1, PROCESS_LOCAL, 6936 bytes)
+2019-04-26 12:36:31 Executor: INFO: Running task 0.0 in stage 4.0 (TID 9)
+2019-04-26 12:36:31 Executor: INFO: Running task 1.0 in stage 4.0 (TID 10)
+2019-04-26 12:36:31 Executor: INFO: Finished task 0.0 in stage 4.0 (TID 9). 1352 bytes result sent to driver
+2019-04-26 12:36:31 Executor: INFO: Finished task 1.0 in stage 4.0 (TID 10). 1352 bytes result sent to driver
+2019-04-26 12:36:31 TaskSetManager: INFO: Finished task 0.0 in stage 4.0 (TID 9) in 26 ms on localhost (executor driver) (1/2)
+2019-04-26 12:36:31 TaskSetManager: INFO: Finished task 1.0 in stage 4.0 (TID 10) in 25 ms on localhost (executor driver) (2/2)
+2019-04-26 12:36:31 TaskSchedulerImpl: INFO: Removed TaskSet 4.0, whose tasks have all completed, from pool 
+2019-04-26 12:36:31 DAGScheduler: INFO: ResultStage 4 (runJob at RVD.scala:558) finished in 0,028 s
+2019-04-26 12:36:31 DAGScheduler: INFO: Job 4 finished: runJob at RVD.scala:558, took 0,056651 s
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C12.<init> instruction count: 3
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C12.apply instruction count: 76
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C12.apply instruction count: 28
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C12.setPartitionIndex instruction count: 14
+2019-04-26 12:36:31 root: INFO: optimize (CompileAndEvaluate: first pass): before: IR size 282: 
+(TableAggregate
+  (MatrixRowsTable
+    (MatrixRead None False False "{\"name\":\"MatrixVCFReader\",\"files\":[\"data/1kg.vcf\"],\"callFields\":[\"PGT\"],\"entryFloatType\":\"Float64\",\"rg\":\"GRCh37\",\"contigRecoding\":{},\"arrayElementsRequired\":true,\"skipInvalidLoci\":false,\"gzAsBGZ\":false,\"forceGZ\":false,\"filterAndReplace\":{\"name\":\"TextInputFilterAndReplace\"},\"partitionsJSON\":null}"))
+  (MakeTuple
+    (ApplyAggOp Count
+      ()
+      None
+      ())
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField locus
+              (Ref row))))))
+    (AggFilter False
+      (ApplyUnaryPrimOp Bang
+        (IsNA
+          (GetField locus
+            (Ref row))))
+      (ApplyAggOp Counter
+        ()
+        None
+        (
+          (Apply contig
+            (GetField locus
+              (Ref row))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField alleles
+              (Ref row))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (ArrayLen
+            (GetField alleles
+              (Ref row))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField rsid
+              (Ref row))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (Apply length
+            (GetField rsid
+              (Ref row))))))
+    (AggFilter False
+      (ApplyUnaryPrimOp Bang
+        (IsNA
+          (GetField rsid
+            (Ref row))))
+      (ApplyAggOp Take
+        (
+          (I32 5))
+        None
+        (
+          (GetField rsid
+            (Ref row)))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField qual
+              (Ref row))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (GetField qual
+          (Ref row))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField filters
+              (Ref row))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (ArrayLen
+            (ToArray
+              (GetField filters
+                (Ref row)))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField info
+              (Ref row))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField AC
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (ArrayLen
+            (GetField AC
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField AF
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (ArrayLen
+            (GetField AF
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField AN
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (GetField AN
+            (GetField info
+              (Ref row))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField BaseQRankSum
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (GetField BaseQRankSum
+          (GetField info
+            (Ref row)))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField ClippingRankSum
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (GetField ClippingRankSum
+          (GetField info
+            (Ref row)))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField DP
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (GetField DP
+            (GetField info
+              (Ref row))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField DS
+              (GetField info
+                (Ref row)))))))
+    (AggFilter False
+      (ApplyUnaryPrimOp Bang
+        (IsNA
+          (GetField DS
+            (GetField info
+              (Ref row)))))
+      (ApplyAggOp Counter
+        ()
+        None
+        (
+          (GetField DS
+            (GetField info
+              (Ref row))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField FS
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (GetField FS
+          (GetField info
+            (Ref row)))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField HaplotypeScore
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (GetField HaplotypeScore
+          (GetField info
+            (Ref row)))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField InbreedingCoeff
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (GetField InbreedingCoeff
+          (GetField info
+            (Ref row)))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField MLEAC
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (ArrayLen
+            (GetField MLEAC
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField MLEAF
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (ArrayLen
+            (GetField MLEAF
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField MQ
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (GetField MQ
+          (GetField info
+            (Ref row)))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField MQ0
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (GetField MQ0
+            (GetField info
+              (Ref row))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField MQRankSum
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (GetField MQRankSum
+          (GetField info
+            (Ref row)))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField QD
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (GetField QD
+          (GetField info
+            (Ref row)))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField ReadPosRankSum
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (GetField ReadPosRankSum
+          (GetField info
+            (Ref row)))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField set
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (Apply length
+            (GetField set
+              (GetField info
+                (Ref row)))))))
+    (AggFilter False
+      (ApplyUnaryPrimOp Bang
+        (IsNA
+          (GetField set
+            (GetField info
+              (Ref row)))))
+      (ApplyAggOp Take
+        (
+          (I32 5))
+        None
+        (
+          (GetField set
+            (GetField info
+              (Ref row))))))))
+2019-04-26 12:36:31 root: INFO: optimize (CompileAndEvaluate: first pass): after: IR size 282:
+(TableAggregate
+  (MatrixRowsTable
+    (MatrixRead Matrix{global:Struct{},col_key:[s],col:Struct{s:String},row_key:[[locus,alleles]],row:Struct{locus:Locus(GRCh37),alleles:Array[String],rsid:String,qual:Float64,filters:Set[String],info:Struct{AC:Array[Int32],AF:Array[Float64],AN:Int32,BaseQRankSum:Float64,ClippingRankSum:Float64,DP:Int32,DS:Boolean,FS:Float64,HaplotypeScore:Float64,InbreedingCoeff:Float64,MLEAC:Array[Int32],MLEAF:Array[Float64],MQ:Float64,MQ0:Int32,MQRankSum:Float64,QD:Float64,ReadPosRankSum:Float64,set:String}},entry:Struct{}} True False "{\"name\":\"MatrixVCFReader\",\"files\":[\"data/1kg.vcf\"],\"callFields\":[\"PGT\"],\"entryFloatType\":\"Float64\",\"rg\":\"GRCh37\",\"contigRecoding\":{},\"arrayElementsRequired\":true,\"skipInvalidLoci\":false,\"gzAsBGZ\":false,\"forceGZ\":false,\"filterAndReplace\":{\"name\":\"TextInputFilterAndReplace\"},\"partitionsJSON\":null}"))
+  (MakeTuple
+    (ApplyAggOp Count
+      ()
+      None
+      ())
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField locus
+              (Ref row))))))
+    (AggFilter False
+      (ApplyUnaryPrimOp Bang
+        (IsNA
+          (GetField locus
+            (Ref row))))
+      (ApplyAggOp Counter
+        ()
+        None
+        (
+          (Apply contig
+            (GetField locus
+              (Ref row))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField alleles
+              (Ref row))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (ArrayLen
+            (GetField alleles
+              (Ref row))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField rsid
+              (Ref row))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (Apply length
+            (GetField rsid
+              (Ref row))))))
+    (AggFilter False
+      (ApplyUnaryPrimOp Bang
+        (IsNA
+          (GetField rsid
+            (Ref row))))
+      (ApplyAggOp Take
+        (
+          (I32 5))
+        None
+        (
+          (GetField rsid
+            (Ref row)))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField qual
+              (Ref row))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (GetField qual
+          (Ref row))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField filters
+              (Ref row))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (ArrayLen
+            (ToArray
+              (GetField filters
+                (Ref row)))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField info
+              (Ref row))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField AC
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (ArrayLen
+            (GetField AC
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField AF
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (ArrayLen
+            (GetField AF
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField AN
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (GetField AN
+            (GetField info
+              (Ref row))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField BaseQRankSum
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (GetField BaseQRankSum
+          (GetField info
+            (Ref row)))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField ClippingRankSum
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (GetField ClippingRankSum
+          (GetField info
+            (Ref row)))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField DP
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (GetField DP
+            (GetField info
+              (Ref row))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField DS
+              (GetField info
+                (Ref row)))))))
+    (AggFilter False
+      (ApplyUnaryPrimOp Bang
+        (IsNA
+          (GetField DS
+            (GetField info
+              (Ref row)))))
+      (ApplyAggOp Counter
+        ()
+        None
+        (
+          (GetField DS
+            (GetField info
+              (Ref row))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField FS
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (GetField FS
+          (GetField info
+            (Ref row)))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField HaplotypeScore
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (GetField HaplotypeScore
+          (GetField info
+            (Ref row)))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField InbreedingCoeff
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (GetField InbreedingCoeff
+          (GetField info
+            (Ref row)))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField MLEAC
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (ArrayLen
+            (GetField MLEAC
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField MLEAF
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (ArrayLen
+            (GetField MLEAF
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField MQ
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (GetField MQ
+          (GetField info
+            (Ref row)))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField MQ0
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (GetField MQ0
+            (GetField info
+              (Ref row))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField MQRankSum
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (GetField MQRankSum
+          (GetField info
+            (Ref row)))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField QD
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (GetField QD
+          (GetField info
+            (Ref row)))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField ReadPosRankSum
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (GetField ReadPosRankSum
+          (GetField info
+            (Ref row)))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField set
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (Apply length
+            (GetField set
+              (GetField info
+                (Ref row)))))))
+    (AggFilter False
+      (ApplyUnaryPrimOp Bang
+        (IsNA
+          (GetField set
+            (GetField info
+              (Ref row)))))
+      (ApplyAggOp Take
+        (
+          (I32 5))
+        None
+        (
+          (GetField set
+            (GetField info
+              (Ref row))))))))
+2019-04-26 12:36:31 root: INFO: optimize (CompileAndEvaluate: after Matrix lowering): before: IR size 295: 
+(TableAggregate
+  (TableMapRows
+    (TableMapGlobals
+      (TableMapGlobals
+        (TableMapRows
+          (TableRead Table{global:Struct{__cols:Array[Struct{s:String}]},key:[locus,alleles],row:Struct{locus:Locus(GRCh37),alleles:Array[String],rsid:String,qual:Float64,filters:Set[String],info:Struct{AC:Array[Int32],AF:Array[Float64],AN:Int32,BaseQRankSum:Float64,ClippingRankSum:Float64,DP:Int32,DS:Boolean,FS:Float64,HaplotypeScore:Float64,InbreedingCoeff:Float64,MLEAC:Array[Int32],MLEAF:Array[Float64],MQ:Float64,MQ0:Int32,MQRankSum:Float64,QD:Float64,ReadPosRankSum:Float64,set:String},`the entries! [877f12a8827e18f61222c6c8c5fb04a8]`:Array[Struct{}]}} False "{\"files\":[\"data/1kg.vcf\"],\"callFields\":[\"PGT\"],\"entryFloatType\":\"Float64\",\"rg\":\"GRCh37\",\"contigRecoding\":{},\"arrayElementsRequired\":true,\"skipInvalidLoci\":false,\"gzAsBGZ\":false,\"forceGZ\":false,\"filterAndReplace\":{\"name\":\"TextInputFilterAndReplace\"},\"partitionsJSON\":null}")
+          (InsertFields
+            (Ref row)
+            None
+            (`the entries! [877f12a8827e18f61222c6c8c5fb04a8]`
+              (MakeArray Array[Struct{}]))))
+        (InsertFields
+          (Ref global)
+          None
+          (__cols
+            (MakeArray Array[Struct{s:String}]))))
+      (SelectFields ()
+        (Ref global)))
+    (SelectFields (locus alleles rsid qual filters info)
+      (Ref row)))
+  (MakeTuple
+    (ApplyAggOp Count
+      ()
+      None
+      ())
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField locus
+              (Ref row))))))
+    (AggFilter False
+      (ApplyUnaryPrimOp Bang
+        (IsNA
+          (GetField locus
+            (Ref row))))
+      (ApplyAggOp Counter
+        ()
+        None
+        (
+          (Apply contig
+            (GetField locus
+              (Ref row))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField alleles
+              (Ref row))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (ArrayLen
+            (GetField alleles
+              (Ref row))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField rsid
+              (Ref row))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (Apply length
+            (GetField rsid
+              (Ref row))))))
+    (AggFilter False
+      (ApplyUnaryPrimOp Bang
+        (IsNA
+          (GetField rsid
+            (Ref row))))
+      (ApplyAggOp Take
+        (
+          (I32 5))
+        None
+        (
+          (GetField rsid
+            (Ref row)))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField qual
+              (Ref row))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (GetField qual
+          (Ref row))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField filters
+              (Ref row))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (ArrayLen
+            (ToArray
+              (GetField filters
+                (Ref row)))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField info
+              (Ref row))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField AC
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (ArrayLen
+            (GetField AC
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField AF
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (ArrayLen
+            (GetField AF
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField AN
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (GetField AN
+            (GetField info
+              (Ref row))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField BaseQRankSum
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (GetField BaseQRankSum
+          (GetField info
+            (Ref row)))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField ClippingRankSum
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (GetField ClippingRankSum
+          (GetField info
+            (Ref row)))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField DP
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (GetField DP
+            (GetField info
+              (Ref row))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField DS
+              (GetField info
+                (Ref row)))))))
+    (AggFilter False
+      (ApplyUnaryPrimOp Bang
+        (IsNA
+          (GetField DS
+            (GetField info
+              (Ref row)))))
+      (ApplyAggOp Counter
+        ()
+        None
+        (
+          (GetField DS
+            (GetField info
+              (Ref row))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField FS
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (GetField FS
+          (GetField info
+            (Ref row)))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField HaplotypeScore
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (GetField HaplotypeScore
+          (GetField info
+            (Ref row)))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField InbreedingCoeff
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (GetField InbreedingCoeff
+          (GetField info
+            (Ref row)))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField MLEAC
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (ArrayLen
+            (GetField MLEAC
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField MLEAF
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (ArrayLen
+            (GetField MLEAF
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField MQ
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (GetField MQ
+          (GetField info
+            (Ref row)))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField MQ0
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (GetField MQ0
+            (GetField info
+              (Ref row))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField MQRankSum
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (GetField MQRankSum
+          (GetField info
+            (Ref row)))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField QD
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (GetField QD
+          (GetField info
+            (Ref row)))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField ReadPosRankSum
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (GetField ReadPosRankSum
+          (GetField info
+            (Ref row)))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField set
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (Apply length
+            (GetField set
+              (GetField info
+                (Ref row)))))))
+    (AggFilter False
+      (ApplyUnaryPrimOp Bang
+        (IsNA
+          (GetField set
+            (GetField info
+              (Ref row)))))
+      (ApplyAggOp Take
+        (
+          (I32 5))
+        None
+        (
+          (GetField set
+            (GetField info
+              (Ref row))))))))
+2019-04-26 12:36:31 root: INFO: Prune: InsertFields: eliminating field 'the entries! [877f12a8827e18f61222c6c8c5fb04a8]'
+2019-04-26 12:36:31 root: INFO: Prune: InsertFields: eliminating field '__cols'
+2019-04-26 12:36:31 root: INFO: optimize (CompileAndEvaluate: after Matrix lowering): after: IR size 281:
+(TableAggregate
+  (TableRead Table{global:Struct{},key:[locus,alleles],row:Struct{locus:Locus(GRCh37),alleles:Array[String],rsid:String,qual:Float64,filters:Set[String],info:Struct{AC:Array[Int32],AF:Array[Float64],AN:Int32,BaseQRankSum:Float64,ClippingRankSum:Float64,DP:Int32,DS:Boolean,FS:Float64,HaplotypeScore:Float64,InbreedingCoeff:Float64,MLEAC:Array[Int32],MLEAF:Array[Float64],MQ:Float64,MQ0:Int32,MQRankSum:Float64,QD:Float64,ReadPosRankSum:Float64,set:String}}} False "{\"files\":[\"data/1kg.vcf\"],\"callFields\":[\"PGT\"],\"entryFloatType\":\"Float64\",\"rg\":\"GRCh37\",\"contigRecoding\":{},\"arrayElementsRequired\":true,\"skipInvalidLoci\":false,\"gzAsBGZ\":false,\"forceGZ\":false,\"filterAndReplace\":{\"name\":\"TextInputFilterAndReplace\"},\"partitionsJSON\":null}")
+  (MakeTuple
+    (ApplyAggOp Count
+      ()
+      None
+      ())
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField locus
+              (Ref row))))))
+    (AggFilter False
+      (ApplyUnaryPrimOp Bang
+        (IsNA
+          (GetField locus
+            (Ref row))))
+      (ApplyAggOp Counter
+        ()
+        None
+        (
+          (Apply contig
+            (GetField locus
+              (Ref row))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField alleles
+              (Ref row))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (ArrayLen
+            (GetField alleles
+              (Ref row))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField rsid
+              (Ref row))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (Apply length
+            (GetField rsid
+              (Ref row))))))
+    (AggFilter False
+      (ApplyUnaryPrimOp Bang
+        (IsNA
+          (GetField rsid
+            (Ref row))))
+      (ApplyAggOp Take
+        (
+          (I32 5))
+        None
+        (
+          (GetField rsid
+            (Ref row)))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField qual
+              (Ref row))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (GetField qual
+          (Ref row))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField filters
+              (Ref row))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (ArrayLen
+            (ToArray
+              (GetField filters
+                (Ref row)))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField info
+              (Ref row))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField AC
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (ArrayLen
+            (GetField AC
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField AF
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (ArrayLen
+            (GetField AF
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField AN
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (GetField AN
+            (GetField info
+              (Ref row))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField BaseQRankSum
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (GetField BaseQRankSum
+          (GetField info
+            (Ref row)))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField ClippingRankSum
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (GetField ClippingRankSum
+          (GetField info
+            (Ref row)))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField DP
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (GetField DP
+            (GetField info
+              (Ref row))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField DS
+              (GetField info
+                (Ref row)))))))
+    (AggFilter False
+      (ApplyUnaryPrimOp Bang
+        (IsNA
+          (GetField DS
+            (GetField info
+              (Ref row)))))
+      (ApplyAggOp Counter
+        ()
+        None
+        (
+          (GetField DS
+            (GetField info
+              (Ref row))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField FS
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (GetField FS
+          (GetField info
+            (Ref row)))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField HaplotypeScore
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (GetField HaplotypeScore
+          (GetField info
+            (Ref row)))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField InbreedingCoeff
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (GetField InbreedingCoeff
+          (GetField info
+            (Ref row)))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField MLEAC
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (ArrayLen
+            (GetField MLEAC
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField MLEAF
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (ArrayLen
+            (GetField MLEAF
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField MQ
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (GetField MQ
+          (GetField info
+            (Ref row)))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField MQ0
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (GetField MQ0
+            (GetField info
+              (Ref row))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField MQRankSum
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (GetField MQRankSum
+          (GetField info
+            (Ref row)))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField QD
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (GetField QD
+          (GetField info
+            (Ref row)))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField ReadPosRankSum
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (GetField ReadPosRankSum
+          (GetField info
+            (Ref row)))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField set
+              (GetField info
+                (Ref row)))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (Apply length
+            (GetField set
+              (GetField info
+                (Ref row)))))))
+    (AggFilter False
+      (ApplyUnaryPrimOp Bang
+        (IsNA
+          (GetField set
+            (GetField info
+              (Ref row)))))
+      (ApplyAggOp Take
+        (
+          (I32 5))
+        None
+        (
+          (GetField set
+            (GetField info
+              (Ref row))))))))
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C13.<init> instruction count: 3
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C13.apply instruction count: 18
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C13.apply instruction count: 7
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C13.setPartitionIndex instruction count: 14
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C14.<init> instruction count: 3
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C14.apply instruction count: 18
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C14.apply instruction count: 7
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C14.setPartitionIndex instruction count: 14
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C15.<init> instruction count: 3
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C15.apply instruction count: 38
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C15.apply instruction count: 7
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C15.setPartitionIndex instruction count: 14
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C16.<init> instruction count: 3
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C16.apply instruction count: 18
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C16.apply instruction count: 7
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C16.setPartitionIndex instruction count: 14
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C17.<init> instruction count: 3
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C17.apply instruction count: 18
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C17.apply instruction count: 7
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C17.setPartitionIndex instruction count: 14
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C18.<init> instruction count: 3
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C18.apply instruction count: 18
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C18.apply instruction count: 7
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C18.setPartitionIndex instruction count: 14
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C19.<init> instruction count: 3
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C19.apply instruction count: 18
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C19.apply instruction count: 7
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C19.setPartitionIndex instruction count: 14
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C20.<init> instruction count: 3
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C20.apply instruction count: 41
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C20.apply instruction count: 7
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C20.setPartitionIndex instruction count: 14
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C21.<init> instruction count: 3
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C21.apply instruction count: 18
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C21.apply instruction count: 7
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C21.setPartitionIndex instruction count: 14
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C22.<init> instruction count: 3
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C22.apply instruction count: 18
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C22.apply instruction count: 7
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C22.setPartitionIndex instruction count: 14
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C23.<init> instruction count: 3
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C23.apply instruction count: 18
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C23.apply instruction count: 7
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C23.setPartitionIndex instruction count: 14
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C24.<init> instruction count: 3
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C24.apply instruction count: 18
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C24.apply instruction count: 7
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C24.setPartitionIndex instruction count: 14
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C25.<init> instruction count: 3
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C25.apply instruction count: 18
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C25.apply instruction count: 7
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C25.setPartitionIndex instruction count: 14
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C26.<init> instruction count: 3
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C26.apply instruction count: 18
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C26.apply instruction count: 7
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C26.setPartitionIndex instruction count: 14
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C27.<init> instruction count: 3
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C27.apply instruction count: 18
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C27.apply instruction count: 7
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C27.setPartitionIndex instruction count: 14
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C28.<init> instruction count: 3
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C28.apply instruction count: 18
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C28.apply instruction count: 7
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C28.setPartitionIndex instruction count: 14
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C29.<init> instruction count: 3
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C29.apply instruction count: 18
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C29.apply instruction count: 7
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C29.setPartitionIndex instruction count: 14
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C30.<init> instruction count: 3
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C30.apply instruction count: 18
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C30.apply instruction count: 7
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C30.setPartitionIndex instruction count: 14
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C31.<init> instruction count: 3
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C31.apply instruction count: 18
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C31.apply instruction count: 7
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C31.setPartitionIndex instruction count: 14
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C32.<init> instruction count: 3
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C32.apply instruction count: 18
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C32.apply instruction count: 7
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C32.setPartitionIndex instruction count: 14
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C33.<init> instruction count: 3
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C33.apply instruction count: 18
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C33.apply instruction count: 7
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C33.setPartitionIndex instruction count: 14
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C34.<init> instruction count: 3
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C34.apply instruction count: 18
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C34.apply instruction count: 7
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C34.setPartitionIndex instruction count: 14
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C35.<init> instruction count: 3
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C35.apply instruction count: 18
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C35.apply instruction count: 7
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C35.setPartitionIndex instruction count: 14
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C36.<init> instruction count: 3
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C36.apply instruction count: 18
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C36.apply instruction count: 7
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C36.setPartitionIndex instruction count: 14
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C37.<init> instruction count: 3
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C37.apply instruction count: 18
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C37.apply instruction count: 7
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C37.setPartitionIndex instruction count: 14
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C38.<init> instruction count: 3
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C38.apply instruction count: 18
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C38.apply instruction count: 7
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C38.setPartitionIndex instruction count: 14
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C39.<init> instruction count: 3
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C39.apply instruction count: 18
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C39.apply instruction count: 7
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C39.setPartitionIndex instruction count: 14
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C40.<init> instruction count: 3
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C40.apply instruction count: 18
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C40.apply instruction count: 7
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C40.setPartitionIndex instruction count: 14
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C41.<init> instruction count: 3
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C41.apply instruction count: 18
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C41.apply instruction count: 7
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C41.setPartitionIndex instruction count: 14
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C42.<init> instruction count: 3
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C42.apply instruction count: 18
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C42.apply instruction count: 7
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C42.setPartitionIndex instruction count: 14
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C43.<init> instruction count: 3
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C43.apply instruction count: 18
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C43.apply instruction count: 7
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C43.setPartitionIndex instruction count: 14
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C44.<init> instruction count: 3
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C44.apply instruction count: 18
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C44.apply instruction count: 7
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C44.setPartitionIndex instruction count: 14
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C45.<init> instruction count: 3
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C45.apply instruction count: 18
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C45.apply instruction count: 7
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C45.setPartitionIndex instruction count: 14
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C46.<init> instruction count: 3
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C46.apply instruction count: 18
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C46.apply instruction count: 7
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C46.setPartitionIndex instruction count: 14
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C47.<init> instruction count: 3
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C47.apply instruction count: 18
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C47.apply instruction count: 7
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C47.setPartitionIndex instruction count: 14
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C48.<init> instruction count: 3
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C48.apply instruction count: 18
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C48.apply instruction count: 7
+2019-04-26 12:36:31 root: INFO: is/hail/codegen/generated/C48.setPartitionIndex instruction count: 14
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C49.<init> instruction count: 3
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C49.apply instruction count: 18
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C49.apply instruction count: 7
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C49.setPartitionIndex instruction count: 14
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C50.<init> instruction count: 3
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C50.apply instruction count: 18
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C50.apply instruction count: 7
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C50.setPartitionIndex instruction count: 14
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C51.<init> instruction count: 3
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C51.apply instruction count: 18
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C51.apply instruction count: 7
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C51.setPartitionIndex instruction count: 14
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C52.<init> instruction count: 3
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C52.apply instruction count: 18
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C52.apply instruction count: 7
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C52.setPartitionIndex instruction count: 14
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C53.<init> instruction count: 3
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C53.apply instruction count: 18
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C53.apply instruction count: 7
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C53.setPartitionIndex instruction count: 14
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C54.<init> instruction count: 3
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C54.apply instruction count: 18
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C54.apply instruction count: 7
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C54.setPartitionIndex instruction count: 14
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C55.<init> instruction count: 3
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C55.apply instruction count: 18
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C55.apply instruction count: 7
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C55.setPartitionIndex instruction count: 14
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C56.<init> instruction count: 3
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C56.apply instruction count: 18
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C56.apply instruction count: 7
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C56.setPartitionIndex instruction count: 14
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C57.<init> instruction count: 3
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C57.apply instruction count: 18
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C57.apply instruction count: 7
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C57.setPartitionIndex instruction count: 14
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C58.<init> instruction count: 3
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C58.apply instruction count: 18
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C58.apply instruction count: 7
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C58.setPartitionIndex instruction count: 14
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C59.<init> instruction count: 3
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C59.apply instruction count: 18
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C59.apply instruction count: 7
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C59.setPartitionIndex instruction count: 14
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C60.<init> instruction count: 3
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C60.apply instruction count: 18
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C60.apply instruction count: 7
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C60.setPartitionIndex instruction count: 14
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C61.<init> instruction count: 3
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C61.apply instruction count: 18
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C61.apply instruction count: 7
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C61.setPartitionIndex instruction count: 14
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C62.<init> instruction count: 3
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C62.apply instruction count: 41
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C62.apply instruction count: 7
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C62.setPartitionIndex instruction count: 14
+2019-04-26 12:36:32 root: INFO: initop (Begin)
+2019-04-26 12:36:32 root: INFO: seqop (Begin
+  (SeqOp (Count  () None ())
+    (I32 0)
+    ())
+  (SeqOp (Sum  () None (Int64))
+    (I32 1)
+    (
+      (Apply toInt64
+        (IsNA
+          (GetField locus
+            (Ref row))))))
+  (If
+    (ApplyUnaryPrimOp Bang
+      (IsNA
+        (GetField locus
+          (Ref row))))
+    (Begin
+      (SeqOp (Counter  () None (String))
+        (I32 2)
+        (
+          (Apply contig
+            (GetField locus
+              (Ref row))))))
+    (Begin))
+  (SeqOp (Sum  () None (Int64))
+    (I32 3)
+    (
+      (Apply toInt64
+        (IsNA
+          (GetField alleles
+            (Ref row))))))
+  (SeqOp (Statistics  () None (Float64))
+    (I32 4)
+    (
+      (Let __iruid_49
+        (ArrayLen
+          (GetField alleles
+            (Ref row)))
+        (Cast Float64
+          (Ref __iruid_49)))))
+  (SeqOp (Sum  () None (Int64))
+    (I32 5)
+    (
+      (Apply toInt64
+        (IsNA
+          (GetField rsid
+            (Ref row))))))
+  (SeqOp (Statistics  () None (Float64))
+    (I32 6)
+    (
+      (Let __iruid_50
+        (Apply length
+          (GetField rsid
+            (Ref row)))
+        (Cast Float64
+          (Ref __iruid_50)))))
+  (If
+    (ApplyUnaryPrimOp Bang
+      (IsNA
+        (GetField rsid
+          (Ref row))))
+    (Begin
+      (SeqOp (Take  (Int32) None (String))
+        (I32 7)
+        (
+          (GetField rsid
+            (Ref row)))))
+    (Begin))
+  (SeqOp (Sum  () None (Int64))
+    (I32 8)
+    (
+      (Apply toInt64
+        (IsNA
+          (GetField qual
+            (Ref row))))))
+  (SeqOp (Statistics  () None (Float64))
+    (I32 9)
+    (
+      (GetField qual
+        (Ref row))))
+  (SeqOp (Sum  () None (Int64))
+    (I32 10)
+    (
+      (Apply toInt64
+        (IsNA
+          (GetField filters
+            (Ref row))))))
+  (SeqOp (Statistics  () None (Float64))
+    (I32 11)
+    (
+      (Let __iruid_51
+        (ArrayLen
+          (ToArray
+            (GetField filters
+              (Ref row))))
+        (Cast Float64
+          (Ref __iruid_51)))))
+  (SeqOp (Sum  () None (Int64))
+    (I32 12)
+    (
+      (Apply toInt64
+        (IsNA
+          (GetField info
+            (Ref row))))))
+  (SeqOp (Sum  () None (Int64))
+    (I32 13)
+    (
+      (Apply toInt64
+        (IsNA
+          (GetField AC
+            (GetField info
+              (Ref row)))))))
+  (SeqOp (Statistics  () None (Float64))
+    (I32 14)
+    (
+      (Let __iruid_52
+        (ArrayLen
+          (GetField AC
+            (GetField info
+              (Ref row))))
+        (Cast Float64
+          (Ref __iruid_52)))))
+  (SeqOp (Sum  () None (Int64))
+    (I32 15)
+    (
+      (Apply toInt64
+        (IsNA
+          (GetField AF
+            (GetField info
+              (Ref row)))))))
+  (SeqOp (Statistics  () None (Float64))
+    (I32 16)
+    (
+      (Let __iruid_53
+        (ArrayLen
+          (GetField AF
+            (GetField info
+              (Ref row))))
+        (Cast Float64
+          (Ref __iruid_53)))))
+  (SeqOp (Sum  () None (Int64))
+    (I32 17)
+    (
+      (Apply toInt64
+        (IsNA
+          (GetField AN
+            (GetField info
+              (Ref row)))))))
+  (SeqOp (Statistics  () None (Float64))
+    (I32 18)
+    (
+      (Let __iruid_54
+        (GetField AN
+          (GetField info
+            (Ref row)))
+        (Cast Float64
+          (Ref __iruid_54)))))
+  (SeqOp (Sum  () None (Int64))
+    (I32 19)
+    (
+      (Apply toInt64
+        (IsNA
+          (GetField BaseQRankSum
+            (GetField info
+              (Ref row)))))))
+  (SeqOp (Statistics  () None (Float64))
+    (I32 20)
+    (
+      (GetField BaseQRankSum
+        (GetField info
+          (Ref row)))))
+  (SeqOp (Sum  () None (Int64))
+    (I32 21)
+    (
+      (Apply toInt64
+        (IsNA
+          (GetField ClippingRankSum
+            (GetField info
+              (Ref row)))))))
+  (SeqOp (Statistics  () None (Float64))
+    (I32 22)
+    (
+      (GetField ClippingRankSum
+        (GetField info
+          (Ref row)))))
+  (SeqOp (Sum  () None (Int64))
+    (I32 23)
+    (
+      (Apply toInt64
+        (IsNA
+          (GetField DP
+            (GetField info
+              (Ref row)))))))
+  (SeqOp (Statistics  () None (Float64))
+    (I32 24)
+    (
+      (Let __iruid_55
+        (GetField DP
+          (GetField info
+            (Ref row)))
+        (Cast Float64
+          (Ref __iruid_55)))))
+  (SeqOp (Sum  () None (Int64))
+    (I32 25)
+    (
+      (Apply toInt64
+        (IsNA
+          (GetField DS
+            (GetField info
+              (Ref row)))))))
+  (If
+    (ApplyUnaryPrimOp Bang
+      (IsNA
+        (GetField DS
+          (GetField info
+            (Ref row)))))
+    (Begin
+      (SeqOp (Counter  () None (Boolean))
+        (I32 26)
+        (
+          (GetField DS
+            (GetField info
+              (Ref row))))))
+    (Begin))
+  (SeqOp (Sum  () None (Int64))
+    (I32 27)
+    (
+      (Apply toInt64
+        (IsNA
+          (GetField FS
+            (GetField info
+              (Ref row)))))))
+  (SeqOp (Statistics  () None (Float64))
+    (I32 28)
+    (
+      (GetField FS
+        (GetField info
+          (Ref row)))))
+  (SeqOp (Sum  () None (Int64))
+    (I32 29)
+    (
+      (Apply toInt64
+        (IsNA
+          (GetField HaplotypeScore
+            (GetField info
+              (Ref row)))))))
+  (SeqOp (Statistics  () None (Float64))
+    (I32 30)
+    (
+      (GetField HaplotypeScore
+        (GetField info
+          (Ref row)))))
+  (SeqOp (Sum  () None (Int64))
+    (I32 31)
+    (
+      (Apply toInt64
+        (IsNA
+          (GetField InbreedingCoeff
+            (GetField info
+              (Ref row)))))))
+  (SeqOp (Statistics  () None (Float64))
+    (I32 32)
+    (
+      (GetField InbreedingCoeff
+        (GetField info
+          (Ref row)))))
+  (SeqOp (Sum  () None (Int64))
+    (I32 33)
+    (
+      (Apply toInt64
+        (IsNA
+          (GetField MLEAC
+            (GetField info
+              (Ref row)))))))
+  (SeqOp (Statistics  () None (Float64))
+    (I32 34)
+    (
+      (Let __iruid_56
+        (ArrayLen
+          (GetField MLEAC
+            (GetField info
+              (Ref row))))
+        (Cast Float64
+          (Ref __iruid_56)))))
+  (SeqOp (Sum  () None (Int64))
+    (I32 35)
+    (
+      (Apply toInt64
+        (IsNA
+          (GetField MLEAF
+            (GetField info
+              (Ref row)))))))
+  (SeqOp (Statistics  () None (Float64))
+    (I32 36)
+    (
+      (Let __iruid_57
+        (ArrayLen
+          (GetField MLEAF
+            (GetField info
+              (Ref row))))
+        (Cast Float64
+          (Ref __iruid_57)))))
+  (SeqOp (Sum  () None (Int64))
+    (I32 37)
+    (
+      (Apply toInt64
+        (IsNA
+          (GetField MQ
+            (GetField info
+              (Ref row)))))))
+  (SeqOp (Statistics  () None (Float64))
+    (I32 38)
+    (
+      (GetField MQ
+        (GetField info
+          (Ref row)))))
+  (SeqOp (Sum  () None (Int64))
+    (I32 39)
+    (
+      (Apply toInt64
+        (IsNA
+          (GetField MQ0
+            (GetField info
+              (Ref row)))))))
+  (SeqOp (Statistics  () None (Float64))
+    (I32 40)
+    (
+      (Let __iruid_58
+        (GetField MQ0
+          (GetField info
+            (Ref row)))
+        (Cast Float64
+          (Ref __iruid_58)))))
+  (SeqOp (Sum  () None (Int64))
+    (I32 41)
+    (
+      (Apply toInt64
+        (IsNA
+          (GetField MQRankSum
+            (GetField info
+              (Ref row)))))))
+  (SeqOp (Statistics  () None (Float64))
+    (I32 42)
+    (
+      (GetField MQRankSum
+        (GetField info
+          (Ref row)))))
+  (SeqOp (Sum  () None (Int64))
+    (I32 43)
+    (
+      (Apply toInt64
+        (IsNA
+          (GetField QD
+            (GetField info
+              (Ref row)))))))
+  (SeqOp (Statistics  () None (Float64))
+    (I32 44)
+    (
+      (GetField QD
+        (GetField info
+          (Ref row)))))
+  (SeqOp (Sum  () None (Int64))
+    (I32 45)
+    (
+      (Apply toInt64
+        (IsNA
+          (GetField ReadPosRankSum
+            (GetField info
+              (Ref row)))))))
+  (SeqOp (Statistics  () None (Float64))
+    (I32 46)
+    (
+      (GetField ReadPosRankSum
+        (GetField info
+          (Ref row)))))
+  (SeqOp (Sum  () None (Int64))
+    (I32 47)
+    (
+      (Apply toInt64
+        (IsNA
+          (GetField set
+            (GetField info
+              (Ref row)))))))
+  (SeqOp (Statistics  () None (Float64))
+    (I32 48)
+    (
+      (Let __iruid_59
+        (Apply length
+          (GetField set
+            (GetField info
+              (Ref row))))
+        (Cast Float64
+          (Ref __iruid_59)))))
+  (If
+    (ApplyUnaryPrimOp Bang
+      (IsNA
+        (GetField set
+          (GetField info
+            (Ref row)))))
+    (Begin
+      (SeqOp (Take  (Int32) None (String))
+        (I32 49)
+        (
+          (GetField set
+            (GetField info
+              (Ref row))))))
+    (Begin)))
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C63.<init> instruction count: 3
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C63.apply instruction count: 31
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C63.apply instruction count: 22
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C63.method1 instruction count: 2294
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C63.method2 instruction count: 5
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C63.method3 instruction count: 69
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C63.method4 instruction count: 8
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C63.method5 instruction count: 8
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C63.method6 instruction count: 95
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C63.method7 instruction count: 2096
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C63.method8 instruction count: 5
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C63.method9 instruction count: 8
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C63.method10 instruction count: 95
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C63.setPartitionIndex instruction count: 14
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C64.<init> instruction count: 3
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C64.apply instruction count: 43
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C64.apply instruction count: 22
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C64.method1 instruction count: 91
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C64.method2 instruction count: 2297
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C64.setPartitionIndex instruction count: 14
+2019-04-26 12:36:32 MemoryStore: INFO: Block broadcast_14 stored as values in memory (estimated size 20.7 KB, free 363.9 MB)
+2019-04-26 12:36:32 MemoryStore: INFO: Block broadcast_14_piece0 stored as bytes in memory (estimated size 3.0 KB, free 363.9 MB)
+2019-04-26 12:36:32 BlockManagerInfo: INFO: Added broadcast_14_piece0 in memory on 192.168.0.15:35871 (size: 3.0 KB, free: 366.1 MB)
+2019-04-26 12:36:32 SparkContext: INFO: Created broadcast 14 from broadcast at LoadVCF.scala:1112
+2019-04-26 12:36:32 MemoryStore: INFO: Block broadcast_15 stored as values in memory (estimated size 56.0 B, free 363.9 MB)
+2019-04-26 12:36:32 MemoryStore: INFO: Block broadcast_15_piece0 stored as bytes in memory (estimated size 67.0 B, free 363.9 MB)
+2019-04-26 12:36:32 BlockManagerInfo: INFO: Added broadcast_15_piece0 in memory on 192.168.0.15:35871 (size: 67.0 B, free: 366.1 MB)
+2019-04-26 12:36:32 SparkContext: INFO: Created broadcast 15 from broadcast at BroadcastValue.scala:16
+2019-04-26 12:36:32 SparkContext: INFO: Starting job: runJob at RVD.scala:558
+2019-04-26 12:36:32 DAGScheduler: INFO: Got job 5 (runJob at RVD.scala:558) with 3 output partitions
+2019-04-26 12:36:32 DAGScheduler: INFO: Final stage: ResultStage 5 (runJob at RVD.scala:558)
+2019-04-26 12:36:32 DAGScheduler: INFO: Parents of final stage: List()
+2019-04-26 12:36:32 DAGScheduler: INFO: Missing parents: List()
+2019-04-26 12:36:32 DAGScheduler: INFO: Submitting ResultStage 5 (MapPartitionsRDD[23] at mapPartitions at ContextRDD.scala:190), which has no missing parents
+2019-04-26 12:36:32 MemoryStore: INFO: Block broadcast_16 stored as values in memory (estimated size 60.3 KB, free 363.8 MB)
+2019-04-26 12:36:32 MemoryStore: INFO: Block broadcast_16_piece0 stored as bytes in memory (estimated size 24.8 KB, free 363.8 MB)
+2019-04-26 12:36:32 BlockManagerInfo: INFO: Added broadcast_16_piece0 in memory on 192.168.0.15:35871 (size: 24.8 KB, free: 366.1 MB)
+2019-04-26 12:36:32 SparkContext: INFO: Created broadcast 16 from broadcast at DAGScheduler.scala:1004
+2019-04-26 12:36:32 DAGScheduler: INFO: Submitting 3 missing tasks from ResultStage 5 (MapPartitionsRDD[23] at mapPartitions at ContextRDD.scala:190) (first 15 tasks are for partitions Vector(0, 1, 2))
+2019-04-26 12:36:32 TaskSchedulerImpl: INFO: Adding task set 5.0 with 3 tasks
+2019-04-26 12:36:32 TaskSetManager: INFO: Starting task 0.0 in stage 5.0 (TID 11, localhost, executor driver, partition 0, PROCESS_LOCAL, 4874 bytes)
+2019-04-26 12:36:32 TaskSetManager: INFO: Starting task 1.0 in stage 5.0 (TID 12, localhost, executor driver, partition 1, PROCESS_LOCAL, 4874 bytes)
+2019-04-26 12:36:32 TaskSetManager: INFO: Starting task 2.0 in stage 5.0 (TID 13, localhost, executor driver, partition 2, PROCESS_LOCAL, 4874 bytes)
+2019-04-26 12:36:32 Executor: INFO: Running task 0.0 in stage 5.0 (TID 11)
+2019-04-26 12:36:32 Executor: INFO: Running task 1.0 in stage 5.0 (TID 12)
+2019-04-26 12:36:32 HadoopRDD: INFO: Input split: file:/home/samuel/Pesquisa/hail.comparison/data/1kg.vcf:33554432+33554432
+2019-04-26 12:36:32 HadoopRDD: INFO: Input split: file:/home/samuel/Pesquisa/hail.comparison/data/1kg.vcf:0+33554432
+2019-04-26 12:36:32 Executor: INFO: Running task 2.0 in stage 5.0 (TID 13)
+2019-04-26 12:36:32 HadoopRDD: INFO: Input split: file:/home/samuel/Pesquisa/hail.comparison/data/1kg.vcf:67108864+4218234
+2019-04-26 12:36:32 BlockManagerInfo: INFO: Removed broadcast_13_piece0 on 192.168.0.15:35871 in memory (size: 6.8 KB, free: 366.1 MB)
+2019-04-26 12:36:32 BlockManagerInfo: INFO: Removed broadcast_12_piece0 on 192.168.0.15:35871 in memory (size: 67.0 B, free: 366.1 MB)
+2019-04-26 12:36:32 BlockManagerInfo: INFO: Removed broadcast_10_piece0 on 192.168.0.15:35871 in memory (size: 3.0 KB, free: 366.1 MB)
+2019-04-26 12:36:32 BlockManagerInfo: INFO: Removed broadcast_11_piece0 on 192.168.0.15:35871 in memory (size: 4.6 KB, free: 366.1 MB)
+2019-04-26 12:36:32 Executor: INFO: Finished task 2.0 in stage 5.0 (TID 13). 2574 bytes result sent to driver
+2019-04-26 12:36:32 TaskSetManager: INFO: Finished task 2.0 in stage 5.0 (TID 13) in 241 ms on localhost (executor driver) (1/3)
+2019-04-26 12:36:32 Executor: INFO: Finished task 0.0 in stage 5.0 (TID 11). 2611 bytes result sent to driver
+2019-04-26 12:36:32 TaskSetManager: INFO: Finished task 0.0 in stage 5.0 (TID 11) in 525 ms on localhost (executor driver) (2/3)
+2019-04-26 12:36:32 Executor: INFO: Finished task 1.0 in stage 5.0 (TID 12). 2656 bytes result sent to driver
+2019-04-26 12:36:32 TaskSetManager: INFO: Finished task 1.0 in stage 5.0 (TID 12) in 552 ms on localhost (executor driver) (3/3)
+2019-04-26 12:36:32 TaskSchedulerImpl: INFO: Removed TaskSet 5.0, whose tasks have all completed, from pool 
+2019-04-26 12:36:32 DAGScheduler: INFO: ResultStage 5 (runJob at RVD.scala:558) finished in 0,551 s
+2019-04-26 12:36:32 DAGScheduler: INFO: Job 5 finished: runJob at RVD.scala:558, took 0,566272 s
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C65.<init> instruction count: 3
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C65.apply instruction count: 76
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C65.apply instruction count: 28
+2019-04-26 12:36:32 root: INFO: is/hail/codegen/generated/C65.setPartitionIndex instruction count: 14
+2019-04-26 12:36:34 root: INFO: optimize (CompileAndEvaluate: first pass): before: IR size 80: 
+(MatrixAggregate
+  (MatrixRead None False False "{\"name\":\"MatrixVCFReader\",\"files\":[\"data/1kg.vcf\"],\"callFields\":[\"PGT\"],\"entryFloatType\":\"Float64\",\"rg\":\"GRCh37\",\"contigRecoding\":{},\"arrayElementsRequired\":true,\"skipInvalidLoci\":false,\"gzAsBGZ\":false,\"forceGZ\":false,\"filterAndReplace\":{\"name\":\"TextInputFilterAndReplace\"},\"partitionsJSON\":null}")
+  (MakeTuple
+    (ApplyAggOp Count
+      ()
+      None
+      ())
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField GT
+              (Ref g))))))
+    (AggFilter False
+      (ApplyUnaryPrimOp Bang
+        (IsNA
+          (GetField GT
+            (Ref g))))
+      (ApplyAggOp Counter
+        ()
+        None
+        (
+          (Apply ploidy
+            (GetField GT
+              (Ref g))))))
+    (AggFilter False
+      (ApplyUnaryPrimOp Bang
+        (IsNA
+          (GetField GT
+            (Ref g))))
+      (ApplyAggOp Counter
+        ()
+        None
+        (
+          (Apply isPhased
+            (GetField GT
+              (Ref g))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (Apply isHomRef
+            (GetField GT
+              (Ref g))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (Apply isHomVar
+            (GetField GT
+              (Ref g))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (Apply isHet
+            (GetField GT
+              (Ref g))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField AD
+              (Ref g))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (ArrayLen
+            (GetField AD
+              (Ref g))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField DP
+              (Ref g))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (GetField DP
+            (Ref g)))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField GQ
+              (Ref g))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (GetField GQ
+            (Ref g)))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField PL
+              (Ref g))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (ArrayLen
+            (GetField PL
+              (Ref g))))))))
+2019-04-26 12:36:34 root: INFO: optimize (CompileAndEvaluate: first pass): after: IR size 80:
+(MatrixAggregate
+  (MatrixRead Matrix{global:Struct{},col_key:[s],col:Struct{s:String},row_key:[[locus,alleles]],row:Struct{locus:Locus(GRCh37),alleles:Array[String]},entry:Struct{GT:Call,AD:Array[+Int32],DP:Int32,GQ:Int32,PL:Array[+Int32]}} False False "{\"name\":\"MatrixVCFReader\",\"files\":[\"data/1kg.vcf\"],\"callFields\":[\"PGT\"],\"entryFloatType\":\"Float64\",\"rg\":\"GRCh37\",\"contigRecoding\":{},\"arrayElementsRequired\":true,\"skipInvalidLoci\":false,\"gzAsBGZ\":false,\"forceGZ\":false,\"filterAndReplace\":{\"name\":\"TextInputFilterAndReplace\"},\"partitionsJSON\":null}")
+  (MakeTuple
+    (ApplyAggOp Count
+      ()
+      None
+      ())
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField GT
+              (Ref g))))))
+    (AggFilter False
+      (ApplyUnaryPrimOp Bang
+        (IsNA
+          (GetField GT
+            (Ref g))))
+      (ApplyAggOp Counter
+        ()
+        None
+        (
+          (Apply ploidy
+            (GetField GT
+              (Ref g))))))
+    (AggFilter False
+      (ApplyUnaryPrimOp Bang
+        (IsNA
+          (GetField GT
+            (Ref g))))
+      (ApplyAggOp Counter
+        ()
+        None
+        (
+          (Apply isPhased
+            (GetField GT
+              (Ref g))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (Apply isHomRef
+            (GetField GT
+              (Ref g))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (Apply isHomVar
+            (GetField GT
+              (Ref g))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (Apply isHet
+            (GetField GT
+              (Ref g))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField AD
+              (Ref g))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (ArrayLen
+            (GetField AD
+              (Ref g))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField DP
+              (Ref g))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (GetField DP
+            (Ref g)))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField GQ
+              (Ref g))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (GetField GQ
+            (Ref g)))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField PL
+              (Ref g))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (ArrayLen
+            (GetField PL
+              (Ref g))))))))
+2019-04-26 12:36:34 root: INFO: optimize (CompileAndEvaluate: after Matrix lowering): before: IR size 81: 
+(MatrixAggregate
+  (CastTableToMatrix `the entries! [877f12a8827e18f61222c6c8c5fb04a8]` __cols (s)
+    (TableRead Table{global:Struct{__cols:Array[Struct{s:String}]},key:[locus,alleles],row:Struct{locus:Locus(GRCh37),alleles:Array[String],`the entries! [877f12a8827e18f61222c6c8c5fb04a8]`:Array[Struct{GT:Call,AD:Array[+Int32],DP:Int32,GQ:Int32,PL:Array[+Int32]}]}} False "{\"files\":[\"data/1kg.vcf\"],\"callFields\":[\"PGT\"],\"entryFloatType\":\"Float64\",\"rg\":\"GRCh37\",\"contigRecoding\":{},\"arrayElementsRequired\":true,\"skipInvalidLoci\":false,\"gzAsBGZ\":false,\"forceGZ\":false,\"filterAndReplace\":{\"name\":\"TextInputFilterAndReplace\"},\"partitionsJSON\":null}"))
+  (MakeTuple
+    (ApplyAggOp Count
+      ()
+      None
+      ())
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField GT
+              (Ref g))))))
+    (AggFilter False
+      (ApplyUnaryPrimOp Bang
+        (IsNA
+          (GetField GT
+            (Ref g))))
+      (ApplyAggOp Counter
+        ()
+        None
+        (
+          (Apply ploidy
+            (GetField GT
+              (Ref g))))))
+    (AggFilter False
+      (ApplyUnaryPrimOp Bang
+        (IsNA
+          (GetField GT
+            (Ref g))))
+      (ApplyAggOp Counter
+        ()
+        None
+        (
+          (Apply isPhased
+            (GetField GT
+              (Ref g))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (Apply isHomRef
+            (GetField GT
+              (Ref g))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (Apply isHomVar
+            (GetField GT
+              (Ref g))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (Apply isHet
+            (GetField GT
+              (Ref g))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField AD
+              (Ref g))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (ArrayLen
+            (GetField AD
+              (Ref g))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField DP
+              (Ref g))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (GetField DP
+            (Ref g)))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField GQ
+              (Ref g))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (GetField GQ
+            (Ref g)))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField PL
+              (Ref g))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (ArrayLen
+            (GetField PL
+              (Ref g))))))))
+2019-04-26 12:36:34 root: INFO: optimize (CompileAndEvaluate: after Matrix lowering): after: IR size 81:
+(MatrixAggregate
+  (CastTableToMatrix `the entries! [877f12a8827e18f61222c6c8c5fb04a8]` __cols (s)
+    (TableRead Table{global:Struct{__cols:Array[Struct{s:String}]},key:[locus,alleles],row:Struct{locus:Locus(GRCh37),alleles:Array[String],`the entries! [877f12a8827e18f61222c6c8c5fb04a8]`:Array[Struct{GT:Call,AD:Array[+Int32],DP:Int32,GQ:Int32,PL:Array[+Int32]}]}} False "{\"files\":[\"data/1kg.vcf\"],\"callFields\":[\"PGT\"],\"entryFloatType\":\"Float64\",\"rg\":\"GRCh37\",\"contigRecoding\":{},\"arrayElementsRequired\":true,\"skipInvalidLoci\":false,\"gzAsBGZ\":false,\"forceGZ\":false,\"filterAndReplace\":{\"name\":\"TextInputFilterAndReplace\"},\"partitionsJSON\":null}"))
+  (MakeTuple
+    (ApplyAggOp Count
+      ()
+      None
+      ())
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField GT
+              (Ref g))))))
+    (AggFilter False
+      (ApplyUnaryPrimOp Bang
+        (IsNA
+          (GetField GT
+            (Ref g))))
+      (ApplyAggOp Counter
+        ()
+        None
+        (
+          (Apply ploidy
+            (GetField GT
+              (Ref g))))))
+    (AggFilter False
+      (ApplyUnaryPrimOp Bang
+        (IsNA
+          (GetField GT
+            (Ref g))))
+      (ApplyAggOp Counter
+        ()
+        None
+        (
+          (Apply isPhased
+            (GetField GT
+              (Ref g))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (Apply isHomRef
+            (GetField GT
+              (Ref g))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (Apply isHomVar
+            (GetField GT
+              (Ref g))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (Apply isHet
+            (GetField GT
+              (Ref g))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField AD
+              (Ref g))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (ArrayLen
+            (GetField AD
+              (Ref g))))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField DP
+              (Ref g))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (GetField DP
+            (Ref g)))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField GQ
+              (Ref g))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (GetField GQ
+            (Ref g)))))
+    (ApplyAggOp Sum
+      ()
+      None
+      (
+        (Apply toInt64
+          (IsNA
+            (GetField PL
+              (Ref g))))))
+    (ApplyAggOp Statistics
+      ()
+      None
+      (
+        (ApplyIR toFloat64
+          (ArrayLen
+            (GetField PL
+              (Ref g))))))))
+2019-04-26 12:36:34 MemoryStore: INFO: Block broadcast_17 stored as values in memory (estimated size 20.7 KB, free 363.8 MB)
+2019-04-26 12:36:34 MemoryStore: INFO: Block broadcast_17_piece0 stored as bytes in memory (estimated size 3.0 KB, free 363.8 MB)
+2019-04-26 12:36:34 BlockManagerInfo: INFO: Added broadcast_17_piece0 in memory on 192.168.0.15:35871 (size: 3.0 KB, free: 366.1 MB)
+2019-04-26 12:36:34 SparkContext: INFO: Created broadcast 17 from broadcast at LoadVCF.scala:1112
+2019-04-26 12:36:34 root: INFO: initop (Begin)
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C66.<init> instruction count: 3
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C66.apply instruction count: 15
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C66.apply instruction count: 16
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C66.setPartitionIndex instruction count: 14
+2019-04-26 12:36:34 root: INFO: seqop (Begin)
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C67.<init> instruction count: 3
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C67.apply instruction count: 15
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C67.apply instruction count: 22
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C67.setPartitionIndex instruction count: 14
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C68.<init> instruction count: 3
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C68.apply instruction count: 214
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C68.apply instruction count: 28
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C68.method1 instruction count: 37
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C68.setPartitionIndex instruction count: 14
+2019-04-26 12:36:34 MemoryStore: INFO: Block broadcast_18 stored as values in memory (estimated size 27.8 KB, free 363.8 MB)
+2019-04-26 12:36:34 MemoryStore: INFO: Block broadcast_18_piece0 stored as bytes in memory (estimated size 1678.0 B, free 363.8 MB)
+2019-04-26 12:36:34 BlockManagerInfo: INFO: Added broadcast_18_piece0 in memory on 192.168.0.15:35871 (size: 1678.0 B, free: 366.1 MB)
+2019-04-26 12:36:34 SparkContext: INFO: Created broadcast 18 from broadcast at BroadcastValue.scala:16
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C69.<init> instruction count: 3
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C69.apply instruction count: 18
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C69.apply instruction count: 7
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C69.setPartitionIndex instruction count: 14
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C70.<init> instruction count: 3
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C70.apply instruction count: 18
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C70.apply instruction count: 7
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C70.setPartitionIndex instruction count: 14
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C71.<init> instruction count: 3
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C71.apply instruction count: 38
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C71.apply instruction count: 7
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C71.setPartitionIndex instruction count: 14
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C72.<init> instruction count: 3
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C72.apply instruction count: 18
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C72.apply instruction count: 7
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C72.setPartitionIndex instruction count: 14
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C73.<init> instruction count: 3
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C73.apply instruction count: 18
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C73.apply instruction count: 7
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C73.setPartitionIndex instruction count: 14
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C74.<init> instruction count: 3
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C74.apply instruction count: 18
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C74.apply instruction count: 7
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C74.setPartitionIndex instruction count: 14
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C75.<init> instruction count: 3
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C75.apply instruction count: 18
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C75.apply instruction count: 7
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C75.setPartitionIndex instruction count: 14
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C76.<init> instruction count: 3
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C76.apply instruction count: 18
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C76.apply instruction count: 7
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C76.setPartitionIndex instruction count: 14
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C77.<init> instruction count: 3
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C77.apply instruction count: 18
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C77.apply instruction count: 7
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C77.setPartitionIndex instruction count: 14
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C78.<init> instruction count: 3
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C78.apply instruction count: 18
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C78.apply instruction count: 7
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C78.setPartitionIndex instruction count: 14
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C79.<init> instruction count: 3
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C79.apply instruction count: 18
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C79.apply instruction count: 7
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C79.setPartitionIndex instruction count: 14
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C80.<init> instruction count: 3
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C80.apply instruction count: 18
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C80.apply instruction count: 7
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C80.setPartitionIndex instruction count: 14
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C81.<init> instruction count: 3
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C81.apply instruction count: 18
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C81.apply instruction count: 7
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C81.setPartitionIndex instruction count: 14
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C82.<init> instruction count: 3
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C82.apply instruction count: 18
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C82.apply instruction count: 7
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C82.setPartitionIndex instruction count: 14
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C83.<init> instruction count: 3
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C83.apply instruction count: 18
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C83.apply instruction count: 7
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C83.setPartitionIndex instruction count: 14
+2019-04-26 12:36:34 root: INFO: initop (Begin)
+2019-04-26 12:36:34 root: INFO: seqop (ArrayFor idx
+  (ArrayRange
+    (I32 0)
+    (I32 284)
+    (I32 1))
+  (Let g
+    (ArrayRef
+      (GetField `the entries! [877f12a8827e18f61222c6c8c5fb04a8]`
+        (Ref va))
+      (Ref idx))
+    (If
+      (IsNA
+        (Ref g))
+      (Begin)
+      (Let sa
+        (ArrayRef
+          (Ref sa)
+          (Ref idx))
+        (Begin
+          (SeqOp (Count  () None ())
+            (I32 0)
+            ())
+          (SeqOp (Sum  () None (Int64))
+            (I32 1)
+            (
+              (Apply toInt64
+                (IsNA
+                  (GetField GT
+                    (Ref g))))))
+          (If
+            (ApplyUnaryPrimOp Bang
+              (IsNA
+                (GetField GT
+                  (Ref g))))
+            (Begin
+              (SeqOp (Counter  () None (Int32))
+                (I32 2)
+                (
+                  (Apply ploidy
+                    (GetField GT
+                      (Ref g))))))
+            (Begin))
+          (If
+            (ApplyUnaryPrimOp Bang
+              (IsNA
+                (GetField GT
+                  (Ref g))))
+            (Begin
+              (SeqOp (Counter  () None (Boolean))
+                (I32 3)
+                (
+                  (Apply isPhased
+                    (GetField GT
+                      (Ref g))))))
+            (Begin))
+          (SeqOp (Sum  () None (Int64))
+            (I32 4)
+            (
+              (Apply toInt64
+                (Apply isHomRef
+                  (GetField GT
+                    (Ref g))))))
+          (SeqOp (Sum  () None (Int64))
+            (I32 5)
+            (
+              (Apply toInt64
+                (Apply isHomVar
+                  (GetField GT
+                    (Ref g))))))
+          (SeqOp (Sum  () None (Int64))
+            (I32 6)
+            (
+              (Apply toInt64
+                (Apply isHet
+                  (GetField GT
+                    (Ref g))))))
+          (SeqOp (Sum  () None (Int64))
+            (I32 7)
+            (
+              (Apply toInt64
+                (IsNA
+                  (GetField AD
+                    (Ref g))))))
+          (SeqOp (Statistics  () None (Float64))
+            (I32 8)
+            (
+              (Let __iruid_72
+                (ArrayLen
+                  (GetField AD
+                    (Ref g)))
+                (Cast Float64
+                  (Ref __iruid_72)))))
+          (SeqOp (Sum  () None (Int64))
+            (I32 9)
+            (
+              (Apply toInt64
+                (IsNA
+                  (GetField DP
+                    (Ref g))))))
+          (SeqOp (Statistics  () None (Float64))
+            (I32 10)
+            (
+              (Let __iruid_73
+                (GetField DP
+                  (Ref g))
+                (Cast Float64
+                  (Ref __iruid_73)))))
+          (SeqOp (Sum  () None (Int64))
+            (I32 11)
+            (
+              (Apply toInt64
+                (IsNA
+                  (GetField GQ
+                    (Ref g))))))
+          (SeqOp (Statistics  () None (Float64))
+            (I32 12)
+            (
+              (Let __iruid_74
+                (GetField GQ
+                  (Ref g))
+                (Cast Float64
+                  (Ref __iruid_74)))))
+          (SeqOp (Sum  () None (Int64))
+            (I32 13)
+            (
+              (Apply toInt64
+                (IsNA
+                  (GetField PL
+                    (Ref g))))))
+          (SeqOp (Statistics  () None (Float64))
+            (I32 14)
+            (
+              (Let __iruid_75
+                (ArrayLen
+                  (GetField PL
+                    (Ref g)))
+                (Cast Float64
+                  (Ref __iruid_75))))))))))
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C84.<init> instruction count: 3
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C84.apply instruction count: 337
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C84.apply instruction count: 28
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C84.method1 instruction count: 997
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C84.method2 instruction count: 5
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C84.method3 instruction count: 73
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C84.method4 instruction count: 6
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C84.method5 instruction count: 73
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C84.method6 instruction count: 6
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C84.method7 instruction count: 6
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C84.method8 instruction count: 6
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C84.method9 instruction count: 6
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C84.setPartitionIndex instruction count: 14
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C85.<init> instruction count: 3
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C85.apply instruction count: 43
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C85.apply instruction count: 22
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C85.method1 instruction count: 56
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C85.method2 instruction count: 687
+2019-04-26 12:36:34 root: INFO: is/hail/codegen/generated/C85.setPartitionIndex instruction count: 14
+2019-04-26 12:36:34 MemoryStore: INFO: Block broadcast_19 stored as values in memory (estimated size 56.0 B, free 363.8 MB)
+2019-04-26 12:36:34 MemoryStore: INFO: Block broadcast_19_piece0 stored as bytes in memory (estimated size 67.0 B, free 363.8 MB)
+2019-04-26 12:36:34 BlockManagerInfo: INFO: Added broadcast_19_piece0 in memory on 192.168.0.15:35871 (size: 67.0 B, free: 366.1 MB)
+2019-04-26 12:36:34 SparkContext: INFO: Created broadcast 19 from broadcast at BroadcastValue.scala:16
+2019-04-26 12:36:34 MemoryStore: INFO: Block broadcast_20 stored as values in memory (estimated size 27.8 KB, free 363.8 MB)
+2019-04-26 12:36:34 MemoryStore: INFO: Block broadcast_20_piece0 stored as bytes in memory (estimated size 1652.0 B, free 363.8 MB)
+2019-04-26 12:36:34 BlockManagerInfo: INFO: Added broadcast_20_piece0 in memory on 192.168.0.15:35871 (size: 1652.0 B, free: 366.1 MB)
+2019-04-26 12:36:34 SparkContext: INFO: Created broadcast 20 from broadcast at BroadcastValue.scala:16
+2019-04-26 12:36:34 SparkContext: INFO: Starting job: runJob at RVD.scala:558
+2019-04-26 12:36:34 DAGScheduler: INFO: Got job 6 (runJob at RVD.scala:558) with 3 output partitions
+2019-04-26 12:36:34 DAGScheduler: INFO: Final stage: ResultStage 6 (runJob at RVD.scala:558)
+2019-04-26 12:36:34 DAGScheduler: INFO: Parents of final stage: List()
+2019-04-26 12:36:34 DAGScheduler: INFO: Missing parents: List()
+2019-04-26 12:36:34 DAGScheduler: INFO: Submitting ResultStage 6 (MapPartitionsRDD[27] at mapPartitions at ContextRDD.scala:190), which has no missing parents
+2019-04-26 12:36:34 MemoryStore: INFO: Block broadcast_21 stored as values in memory (estimated size 40.6 KB, free 363.7 MB)
+2019-04-26 12:36:34 MemoryStore: INFO: Block broadcast_21_piece0 stored as bytes in memory (estimated size 19.4 KB, free 363.7 MB)
+2019-04-26 12:36:34 BlockManagerInfo: INFO: Added broadcast_21_piece0 in memory on 192.168.0.15:35871 (size: 19.4 KB, free: 366.1 MB)
+2019-04-26 12:36:34 SparkContext: INFO: Created broadcast 21 from broadcast at DAGScheduler.scala:1004
+2019-04-26 12:36:34 DAGScheduler: INFO: Submitting 3 missing tasks from ResultStage 6 (MapPartitionsRDD[27] at mapPartitions at ContextRDD.scala:190) (first 15 tasks are for partitions Vector(0, 1, 2))
+2019-04-26 12:36:34 TaskSchedulerImpl: INFO: Adding task set 6.0 with 3 tasks
+2019-04-26 12:36:34 TaskSetManager: INFO: Starting task 0.0 in stage 6.0 (TID 14, localhost, executor driver, partition 0, PROCESS_LOCAL, 4874 bytes)
+2019-04-26 12:36:34 TaskSetManager: INFO: Starting task 1.0 in stage 6.0 (TID 15, localhost, executor driver, partition 1, PROCESS_LOCAL, 4874 bytes)
+2019-04-26 12:36:34 TaskSetManager: INFO: Starting task 2.0 in stage 6.0 (TID 16, localhost, executor driver, partition 2, PROCESS_LOCAL, 4874 bytes)
+2019-04-26 12:36:34 Executor: INFO: Running task 0.0 in stage 6.0 (TID 14)
+2019-04-26 12:36:34 Executor: INFO: Running task 1.0 in stage 6.0 (TID 15)
+2019-04-26 12:36:34 Executor: INFO: Running task 2.0 in stage 6.0 (TID 16)
+2019-04-26 12:36:34 HadoopRDD: INFO: Input split: file:/home/samuel/Pesquisa/hail.comparison/data/1kg.vcf:33554432+33554432
+2019-04-26 12:36:34 HadoopRDD: INFO: Input split: file:/home/samuel/Pesquisa/hail.comparison/data/1kg.vcf:67108864+4218234
+2019-04-26 12:36:34 HadoopRDD: INFO: Input split: file:/home/samuel/Pesquisa/hail.comparison/data/1kg.vcf:0+33554432
+2019-04-26 12:36:35 Executor: INFO: Finished task 2.0 in stage 6.0 (TID 16). 1485 bytes result sent to driver
+2019-04-26 12:36:35 TaskSetManager: INFO: Finished task 2.0 in stage 6.0 (TID 16) in 747 ms on localhost (executor driver) (1/3)
+2019-04-26 12:36:36 Executor: INFO: Finished task 1.0 in stage 6.0 (TID 15). 1497 bytes result sent to driver
+2019-04-26 12:36:36 TaskSetManager: INFO: Finished task 1.0 in stage 6.0 (TID 15) in 1841 ms on localhost (executor driver) (2/3)
+2019-04-26 12:36:36 Executor: INFO: Finished task 0.0 in stage 6.0 (TID 14). 1497 bytes result sent to driver
+2019-04-26 12:36:36 TaskSetManager: INFO: Finished task 0.0 in stage 6.0 (TID 14) in 1899 ms on localhost (executor driver) (3/3)
+2019-04-26 12:36:36 TaskSchedulerImpl: INFO: Removed TaskSet 6.0, whose tasks have all completed, from pool 
+2019-04-26 12:36:36 DAGScheduler: INFO: ResultStage 6 (runJob at RVD.scala:558) finished in 1,900 s
+2019-04-26 12:36:36 DAGScheduler: INFO: Job 6 finished: runJob at RVD.scala:558, took 1,910603 s
+2019-04-26 12:36:36 root: INFO: is/hail/codegen/generated/C86.<init> instruction count: 3
+2019-04-26 12:36:36 root: INFO: is/hail/codegen/generated/C86.apply instruction count: 76
+2019-04-26 12:36:36 root: INFO: is/hail/codegen/generated/C86.apply instruction count: 28
+2019-04-26 12:36:36 root: INFO: is/hail/codegen/generated/C86.setPartitionIndex instruction count: 14
+2019-04-26 12:41:19 SparkContext: INFO: Invoking stop() from shutdown hook
+2019-04-26 12:41:19 AbstractConnector: INFO: Stopped Spark@430a257d{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+2019-04-26 12:41:19 SparkUI: INFO: Stopped Spark web UI at http://192.168.0.15:4040
+2019-04-26 12:41:19 MapOutputTrackerMasterEndpoint: INFO: MapOutputTrackerMasterEndpoint stopped!
+2019-04-26 12:41:19 MemoryStore: INFO: MemoryStore cleared
+2019-04-26 12:41:19 BlockManager: INFO: BlockManager stopped
+2019-04-26 12:41:19 BlockManagerMaster: INFO: BlockManagerMaster stopped
+2019-04-26 12:41:19 OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: INFO: OutputCommitCoordinator stopped!
+2019-04-26 12:41:19 SparkContext: INFO: Successfully stopped SparkContext
+2019-04-26 12:41:19 ShutdownHookManager: INFO: Shutdown hook called
+2019-04-26 12:41:19 ShutdownHookManager: INFO: Deleting directory /tmp/spark-ff96953b-d713-4ec8-a6ac-e1357ba4c25c/pyspark-9caafe7d-add1-487c-9bb9-54286a7c8ca5
+2019-04-26 12:41:19 ShutdownHookManager: INFO: Deleting directory /tmp/spark-ff96953b-d713-4ec8-a6ac-e1357ba4c25c
